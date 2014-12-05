@@ -15,6 +15,29 @@ $timer-text-color-warning: #E53935;
 .timer {
   height: $timer-size;
 
+  &.full {
+
+    .timer-half.right,
+    .timer-half.left {
+      border: $timer-border solid $timer-border-color-regular;
+      @include transform(rotate(180deg));
+    }
+
+    &.negative {
+
+      .timer-bg {
+        color: $timer-text-color-warning;
+      }
+
+      .timer-half.right,
+      .timer-half.left {
+        border: $timer-border solid $timer-border-color-warning;
+      }
+
+    }
+
+  }
+
   .timer-bg,
   .timer-half-container,
   .timer-half,

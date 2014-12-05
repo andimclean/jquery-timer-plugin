@@ -58,6 +58,19 @@ table {
    ======================= */
 .timer {
   height: 100px; }
+  .timer.full .timer-half.right,
+  .timer.full .timer-half.left {
+    border: 6px solid #66BB6A;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  .timer.full.negative .timer-bg {
+    color: #E53935; }
+  .timer.full.negative .timer-half.right,
+  .timer.full.negative .timer-half.left {
+    border: 6px solid #E57373; }
   .timer .timer-bg,
   .timer .timer-half-container,
   .timer .timer-half {
