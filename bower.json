@@ -21,6 +21,7 @@
     "reset-scss": "*",
     "bourbon": "~4.0.2",
     "jquery": "~2.1.1",
-    "underscore": "~1.7.0"
+    "underscore": "~1.7.0",
+    "css-smart-grid": "~5.1.3"
   }
 }

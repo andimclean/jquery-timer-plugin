@@ -24,11 +24,22 @@
 </head>
 <body>
 
-<h2>Demonstration of timers</h2>
+<div class="container">
 
-<div id="timers">
-    <!-- append different timers here -->
-</div>
+    <div class="row">
+
+        <div class="columns twelve">
+
+            <h1>Demonstration of timers</h1>
+
+            <div id="timers">
+                <!-- append different timers here -->
+            </div>
+        </div>
+
+    </div><!-- end of row -->
+
+</div><!-- end of container -->
 
 <script type="text/html" id="timer-tpl">
     <div class="timer <%= minutes >= 60 ? 'full' : '' %> <%= minutes <= -60 ? 'full negative' : '' %>"

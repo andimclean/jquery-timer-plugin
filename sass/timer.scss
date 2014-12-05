@@ -10,9 +10,10 @@
   @include border-left-radius($radius);
 }
 
-// base
+// normalize and grid
 @import "reset";
-@import "base";
+@import "smart-grid";
 
 // modules
+@import "base";
 @import "pie";
