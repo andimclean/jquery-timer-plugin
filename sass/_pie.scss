@@ -45,6 +45,7 @@ $timer-border-color-warning: #F5DE87;
 
   $deg: (360/60 * $minute);
 
+  // positive minutes
   .timer[data-minutes="#{$minute}"] {
 
     .timer-half.right {
@@ -61,12 +62,23 @@ $timer-border-color-warning: #F5DE87;
 
   }
 
+  // negative minutes
+  .timer[data-minutes="-#{$minute}"] {
+
+    .timer-half.left {
+      @include transform(rotate(-#{$deg}deg));
+      border: $timer-border solid $timer-border-color-warning;
+    }
+
+  }
+
 }
 
 @for $minute from 31 through 60 {
 
   $deg: (360/60 * ($minute - 30));
 
+  // positive minutes
   .timer[data-minutes="#{$minute}"] {
 
     // right half must be filled completely for minutes > 30
@@ -79,6 +91,23 @@ $timer-border-color-warning: #F5DE87;
     .timer-half.left {
       border: $timer-border solid $timer-border-color-regular;
       @include transform(rotate(#{$deg}deg));
+    }
+
+  }
+
+  // negative minutes
+  .timer[data-minutes="-#{$minute}"] {
+
+    // right half must be filled prorata temporis
+    .timer-half.right {
+      border: $timer-border solid $timer-border-color-warning;
+      @include transform(rotate(-#{$deg}deg));
+    }
+
+    // left half must be filled completely for minutes < -30
+    .timer-half.left {
+      border: $timer-border solid $timer-border-color-warning;
+      @include transform(rotate(-180deg));
     }
 
   }
