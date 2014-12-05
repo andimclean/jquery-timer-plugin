@@ -13,8 +13,9 @@ $timer-border-color-warning: #F5DE87;
   height: $timer-size;
 
   .timer-bg,
-  .timer-right-half-container,
-  .timer-right-half {
+  .timer-half-container,
+  .timer-half,
+  {
     position: absolute;
     width: $timer-size;
     height: $timer-size;
@@ -25,12 +26,17 @@ $timer-border-color-warning: #F5DE87;
     border: $timer-border solid $timer-border-color-base;
   }
 
-  .timer-right-half-container {
+  .timer-half-container {
     clip: rect(0px, $timer-size, $timer-size, $timer-size/2);
 
-    .timer-right-half {
+    .timer-half {
       clip: rect(0px, $timer-size/2, $timer-size, 0px);
     }
+
+    &.left {
+      @include transform(rotate(180deg));
+    }
+
   }
 
 }
@@ -41,7 +47,7 @@ $timer-border-color-warning: #F5DE87;
 
   .timer[data-minutes="#{$minute}"] {
 
-    .timer-right-half {
+    .timer-half.right {
 
       @include transform(rotate(#{$deg}deg));
 
@@ -51,6 +57,28 @@ $timer-border-color-warning: #F5DE87;
         border: $timer-border solid $timer-border-color-regular;
       }
 
+    }
+
+  }
+
+}
+
+@for $minute from 31 through 60 {
+
+  $deg: (360/60 * ($minute - 30));
+
+  .timer[data-minutes="#{$minute}"] {
+
+    // right half must be filled completely for minutes > 30
+    .timer-half.right {
+      border: $timer-border solid $timer-border-color-regular;
+      @include transform(rotate(180deg));
+    }
+
+    // left half must be filled prorata temporis
+    .timer-half.left {
+      border: $timer-border solid $timer-border-color-regular;
+      @include transform(rotate(#{$deg}deg));
     }
 
   }
