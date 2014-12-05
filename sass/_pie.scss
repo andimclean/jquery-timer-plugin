@@ -5,9 +5,12 @@
 $timer-size: 100px;
 
 $timer-border: 6px;
-$timer-border-color-base: #9F9F9F;
-$timer-border-color-regular: #D8E47F;
-$timer-border-color-warning: #F5DE87;
+$timer-border-color-base: #BDBDBD;
+$timer-border-color-regular: #66BB6A;
+$timer-border-color-warning: #E57373;
+
+$timer-text-color-regular: inherit;
+$timer-text-color-warning: #E53935;
 
 .timer {
   height: $timer-size;
@@ -24,6 +27,17 @@ $timer-border-color-warning: #F5DE87;
 
   .timer-bg {
     border: $timer-border solid $timer-border-color-base;
+
+    // styling for displaying minutes as text
+    text-align: center;
+    line-height: $timer-size - 2*$timer-border;
+    vertical-align: baseline;
+    font-size: 1.5em;
+
+    small {
+      font-size: 0.5em;
+    }
+
   }
 
   .timer-half-container {
@@ -65,6 +79,10 @@ $timer-border-color-warning: #F5DE87;
   // negative minutes
   .timer[data-minutes="-#{$minute}"] {
 
+    .timer-bg {
+      color: $timer-text-color-warning;
+    }
+
     .timer-half.left {
       @include transform(rotate(-#{$deg}deg));
       border: $timer-border solid $timer-border-color-warning;
@@ -97,6 +115,10 @@ $timer-border-color-warning: #F5DE87;
 
   // negative minutes
   .timer[data-minutes="-#{$minute}"] {
+
+    .timer-bg {
+      color: $timer-text-color-warning;
+    }
 
     // right half must be filled prorata temporis
     .timer-half.right {
