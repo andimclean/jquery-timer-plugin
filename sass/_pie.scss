@@ -1,0 +1,14 @@
+$timer-size: 100px;
+
+.timer {
+  height: $timer-size;
+
+  .timer-bg {
+    background-color: grey;
+    position: absolute;
+    width: $timer-size;
+    height: $timer-size;
+    border-radius: $timer-size/2;
+  }
+
+}
