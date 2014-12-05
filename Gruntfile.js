@@ -23,7 +23,8 @@ module.exports = function (grunt) {
       compile: {
         options: {
           loadPath: [
-            'bower_components/reset-scss/'
+            'bower_components/reset-scss/',
+            'bower_components/bourbon/dist/'
           ]
         },
         files: {

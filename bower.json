@@ -18,6 +18,7 @@
     "Gruntfile.js"
   ],
   "dependencies": {
-    "reset-scss": "*"
+    "reset-scss": "*",
+    "bourbon": "~4.0.2"
   }
 }

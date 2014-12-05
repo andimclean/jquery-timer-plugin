@@ -18,7 +18,7 @@ $timer-border-color-warning: #F5DE87;
     position: absolute;
     width: $timer-size;
     height: $timer-size;
-    border-radius: 50%;
+    @include border-radius($timer-size/2);
   }
 
   .timer-bg {
@@ -43,7 +43,7 @@ $timer-border-color-warning: #F5DE87;
 
     .timer-right-half {
 
-      transform: rotate(#{$deg}deg);
+      @include transform(rotate(#{$deg}deg));
 
       @if $minute < 15 {
         border: $timer-border solid $timer-border-color-warning;
