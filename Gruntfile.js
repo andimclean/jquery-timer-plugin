@@ -21,6 +21,11 @@ module.exports = function (grunt) {
 
     sass: {
       compile: {
+        options: {
+          loadPath: [
+            'bower_components/reset-scss/'
+          ]
+        },
         files: {
           'css/timer.css': 'sass/timer.scss'
         }

@@ -1,0 +1,23 @@
+{
+  "name": "css3-timer-pies",
+  "version": "0.1.0",
+  "main": [
+    "index.html",
+    "sass/_pie.scss",
+    "sass/timer.scss",
+    "css/timer.css",
+    "css/timer.css.map"
+  ],
+  "ignore": [
+    "**/.*",
+    ".jshintrc",
+    "node_modules",
+    "bower_components",
+    ".sass-cache",
+    "README.md",
+    "Gruntfile.js"
+  ],
+  "dependencies": {
+    "reset-scss": "*"
+  }
+}

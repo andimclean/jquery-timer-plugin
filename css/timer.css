@@ -1,10 +1,193 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* ======================
+   Base Styling Rules
+   ======================= */
+* {
+  box-sizing: border-box; }
+
+/* ======================
+   Timer Pies Module
+   ======================= */
 .timer {
   height: 100px; }
-  .timer .timer-bg {
-    background-color: grey;
+  .timer .timer-bg,
+  .timer .timer-right-half-container,
+  .timer .timer-right-half {
     position: absolute;
     width: 100px;
     height: 100px;
-    border-radius: 50px; }
+    border-radius: 50%; }
+  .timer .timer-bg {
+    border: 6px solid #9F9F9F; }
+  .timer .timer-right-half-container {
+    clip: rect(0px, 100px, 100px, 50px); }
+    .timer .timer-right-half-container .timer-right-half {
+      clip: rect(0px, 50px, 100px, 0px); }
+
+.timer[data-minutes="1"] .timer-right-half {
+  transform: rotate(6deg);
+  border: 6px solid #F5DE87; }
+
+.timer[data-minutes="2"] .timer-right-half {
+  transform: rotate(12deg);
+  border: 6px solid #F5DE87; }
+
+.timer[data-minutes="3"] .timer-right-half {
+  transform: rotate(18deg);
+  border: 6px solid #F5DE87; }
+
+.timer[data-minutes="4"] .timer-right-half {
+  transform: rotate(24deg);
+  border: 6px solid #F5DE87; }
+
+.timer[data-minutes="5"] .timer-right-half {
+  transform: rotate(30deg);
+  border: 6px solid #F5DE87; }
+
+.timer[data-minutes="6"] .timer-right-half {
+  transform: rotate(36deg);
+  border: 6px solid #F5DE87; }
+
+.timer[data-minutes="7"] .timer-right-half {
+  transform: rotate(42deg);
+  border: 6px solid #F5DE87; }
+
+.timer[data-minutes="8"] .timer-right-half {
+  transform: rotate(48deg);
+  border: 6px solid #F5DE87; }
+
+.timer[data-minutes="9"] .timer-right-half {
+  transform: rotate(54deg);
+  border: 6px solid #F5DE87; }
+
+.timer[data-minutes="10"] .timer-right-half {
+  transform: rotate(60deg);
+  border: 6px solid #F5DE87; }
+
+.timer[data-minutes="11"] .timer-right-half {
+  transform: rotate(66deg);
+  border: 6px solid #F5DE87; }
+
+.timer[data-minutes="12"] .timer-right-half {
+  transform: rotate(72deg);
+  border: 6px solid #F5DE87; }
+
+.timer[data-minutes="13"] .timer-right-half {
+  transform: rotate(78deg);
+  border: 6px solid #F5DE87; }
+
+.timer[data-minutes="14"] .timer-right-half {
+  transform: rotate(84deg);
+  border: 6px solid #F5DE87; }
+
+.timer[data-minutes="15"] .timer-right-half {
+  transform: rotate(90deg);
+  border: 6px solid #D8E47F; }
+
+.timer[data-minutes="16"] .timer-right-half {
+  transform: rotate(96deg);
+  border: 6px solid #D8E47F; }
+
+.timer[data-minutes="17"] .timer-right-half {
+  transform: rotate(102deg);
+  border: 6px solid #D8E47F; }
+
+.timer[data-minutes="18"] .timer-right-half {
+  transform: rotate(108deg);
+  border: 6px solid #D8E47F; }
+
+.timer[data-minutes="19"] .timer-right-half {
+  transform: rotate(114deg);
+  border: 6px solid #D8E47F; }
+
+.timer[data-minutes="20"] .timer-right-half {
+  transform: rotate(120deg);
+  border: 6px solid #D8E47F; }
+
+.timer[data-minutes="21"] .timer-right-half {
+  transform: rotate(126deg);
+  border: 6px solid #D8E47F; }
+
+.timer[data-minutes="22"] .timer-right-half {
+  transform: rotate(132deg);
+  border: 6px solid #D8E47F; }
+
+.timer[data-minutes="23"] .timer-right-half {
+  transform: rotate(138deg);
+  border: 6px solid #D8E47F; }
+
+.timer[data-minutes="24"] .timer-right-half {
+  transform: rotate(144deg);
+  border: 6px solid #D8E47F; }
+
+.timer[data-minutes="25"] .timer-right-half {
+  transform: rotate(150deg);
+  border: 6px solid #D8E47F; }
+
+.timer[data-minutes="26"] .timer-right-half {
+  transform: rotate(156deg);
+  border: 6px solid #D8E47F; }
+
+.timer[data-minutes="27"] .timer-right-half {
+  transform: rotate(162deg);
+  border: 6px solid #D8E47F; }
+
+.timer[data-minutes="28"] .timer-right-half {
+  transform: rotate(168deg);
+  border: 6px solid #D8E47F; }
+
+.timer[data-minutes="29"] .timer-right-half {
+  transform: rotate(174deg);
+  border: 6px solid #D8E47F; }
+
+.timer[data-minutes="30"] .timer-right-half {
+  transform: rotate(180deg);
+  border: 6px solid #D8E47F; }
 
 /*# sourceMappingURL=timer.css.map */

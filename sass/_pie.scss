@@ -1,14 +1,58 @@
+/* ======================
+   Timer Pies Module
+   ======================= */
+
 $timer-size: 100px;
+
+$timer-border: 6px;
+$timer-border-color-base: #9F9F9F;
+$timer-border-color-regular: #D8E47F;
+$timer-border-color-warning: #F5DE87;
 
 .timer {
   height: $timer-size;
 
-  .timer-bg {
-    background-color: grey;
+  .timer-bg,
+  .timer-right-half-container,
+  .timer-right-half {
     position: absolute;
     width: $timer-size;
     height: $timer-size;
-    border-radius: $timer-size/2;
+    border-radius: 50%;
+  }
+
+  .timer-bg {
+    border: $timer-border solid $timer-border-color-base;
+  }
+
+  .timer-right-half-container {
+    clip: rect(0px, $timer-size, $timer-size, $timer-size/2);
+
+    .timer-right-half {
+      clip: rect(0px, $timer-size/2, $timer-size, 0px);
+    }
+  }
+
+}
+
+@for $minute from 1 through 30 {
+
+  $deg: (360/60 * $minute);
+
+  .timer[data-minutes="#{$minute}"] {
+
+    .timer-right-half {
+
+      transform: rotate(#{$deg}deg);
+
+      @if $minute < 15 {
+        border: $timer-border solid $timer-border-color-warning;
+      } @else {
+        border: $timer-border solid $timer-border-color-regular;
+      }
+
+    }
+
   }
 
 }
