@@ -12,7 +12,7 @@
 
             var template = _.template($("#timer-tpl").html());
 
-            _.each([0, 3, 7, 15, 23, 30, 37, 45, 50, 60, 113, -5, -17, -60, -80], function (minute) {
+            _.each([7, 42, 113, -5], function (minute) {
 
                 $("#timers").append(template({minutes: minute}));
 
@@ -28,13 +28,12 @@
 
     <div class="row">
 
-        <div class="columns twelve">
+        <h1 class="col col-12 capitalize text-center font-bold">Demonstration of timer pies</h1>
 
-            <h1>Demonstration of timers</h1>
-
-            <div id="timers">
-                <!-- append different timers here -->
-            </div>
+        <div class="col col-12">
+            <h2 class="col col-12 capitalize">Timer pies with border</h2>
+            <div class="col col-12" id="timers"><!-- append different timers here --></div>
+            <div class="col col-12">[SHOW CODE HERE]</div>
         </div>
 
     </div><!-- end of row -->
@@ -42,7 +41,7 @@
 </div><!-- end of container -->
 
 <script type="text/html" id="timer-tpl">
-    <div class="timer <%= minutes >= 60 ? 'full' : '' %> <%= minutes <= -60 ? 'full negative' : '' %>"
+    <div class="col col-1-4 mobile-full timer <%= minutes >= 60 ? 'full' : '' %> <%= minutes <= -60 ? 'full negative' : '' %>"
          data-minutes="<%= minutes %>">
         <div class="timer-bg"><%= minutes %>
             <small>m</small>

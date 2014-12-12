@@ -25,7 +25,7 @@ module.exports = function (grunt) {
           loadPath: [
             'bower_components/reset-scss/',
             'bower_components/bourbon/dist/',
-            'bower_components/css-smart-grid/sass/'
+            'bower_components/base/scss'
           ]
         },
         files: {

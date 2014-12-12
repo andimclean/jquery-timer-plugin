@@ -10,9 +10,8 @@
   @include border-left-radius($radius);
 }
 
-// normalize and grid
-@import "reset";
-@import "smart-grid";
+// styling framework: https://github.com/matthewhartman/base
+@import "style";
 
 // modules
 @import "base";
