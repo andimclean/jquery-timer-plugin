@@ -25,11 +25,13 @@ module.exports = function (grunt) {
           loadPath: [
             'bower_components/reset-scss/',
             'bower_components/bourbon/dist/',
-            'bower_components/base/scss'
+            'bower_components/base/'
           ]
         },
         files: {
-          'css/timer.css': 'sass/timer.scss'
+          'css/timer.css': 'sass/timer.scss',
+          'css/pie.css': 'sass/pie.scss',
+          'css/style.css': 'sass/style.scss'
         }
       }
     },

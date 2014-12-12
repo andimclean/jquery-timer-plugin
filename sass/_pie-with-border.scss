@@ -9,8 +9,8 @@ $timer-border-color-base: #BDBDBD;
 $timer-border-color-regular: #66BB6A;
 $timer-border-color-warning: #E57373;
 
-$timer-text-color-regular: inherit;
-$timer-text-color-warning: #E53935;
+$timer-color-regular: inherit;
+$timer-color-warning: #E53935;
 
 .timer {
   height: $timer-size;
@@ -26,7 +26,7 @@ $timer-text-color-warning: #E53935;
     &.negative {
 
       .timer-bg {
-        color: $timer-text-color-warning;
+        color: $timer-color-warning;
       }
 
       .timer-half.right,
@@ -103,7 +103,7 @@ $timer-text-color-warning: #E53935;
   .timer[data-minutes="-#{$minute}"] {
 
     .timer-bg {
-      color: $timer-text-color-warning;
+      color: $timer-color-warning;
     }
 
     .timer-half.left {
@@ -140,7 +140,7 @@ $timer-text-color-warning: #E53935;
   .timer[data-minutes="-#{$minute}"] {
 
     .timer-bg {
-      color: $timer-text-color-warning;
+      color: $timer-color-warning;
     }
 
     // right half must be filled prorata temporis

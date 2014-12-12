@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "main": [
     "index.html",
-    "sass/_pie.scss",
+    "sass/pie.scss",
     "sass/timer.scss",
     "css/timer.css",
-    "css/timer.css.map"
+    "css/timer.css.map",
+    "css/pie.css",
+    "css/pie.css.map"
   ],
   "ignore": [
     "**/.*",
@@ -15,7 +17,10 @@
     "bower_components",
     ".sass-cache",
     "README.md",
-    "Gruntfile.js"
+    "Gruntfile.js",
+    "sass/style.scss",
+    "css/style.css",
+    "css/style.css.map"
   ],
   "dependencies": {
     "reset-scss": "*",

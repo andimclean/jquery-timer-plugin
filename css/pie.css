@@ -1,24 +1,24 @@
 /* ======================
-   Timer Pies Module
+   pie Pies Module
    ======================= */
-.timer {
+.pie {
   height: 100px; }
-  .timer.full .timer-half.right,
-  .timer.full .timer-half.left {
-    border: 6px solid #66BB6A;
+  .pie.full .pie-half.right,
+  .pie.full .pie-half.left {
+    background-color: #66BB6A;
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     -o-transform: rotate(180deg);
     transform: rotate(180deg); }
-  .timer.full.negative .timer-bg {
+  .pie.full.negative .pie-bg {
     color: #E53935; }
-  .timer.full.negative .timer-half.right,
-  .timer.full.negative .timer-half.left {
-    border: 6px solid #E57373; }
-  .timer .timer-bg,
-  .timer .timer-half-container,
-  .timer .timer-half {
+  .pie.full.negative .pie-half.right,
+  .pie.full.negative .pie-half.left {
+    background-color: #E57373; }
+  .pie .pie-bg,
+  .pie .pie-half-container,
+  .pie .pie-half {
     position: absolute;
     width: 100px;
     height: 100px;
@@ -30,1523 +30,1523 @@
     border-bottom-right-radius: 50px;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px; }
-  .timer .timer-bg {
-    border: 6px solid #BDBDBD;
+  .pie .pie-bg {
+    background-color: #BDBDBD;
     text-align: center;
-    line-height: 88px;
+    line-height: 100px;
     vertical-align: baseline;
     font-size: 1.5em; }
-    .timer .timer-bg small {
+    .pie .pie-bg small {
       font-size: 0.5em; }
-  .timer .timer-half-container {
+  .pie .pie-half-container {
     clip: rect(0px, 100px, 100px, 50px); }
-    .timer .timer-half-container .timer-half {
+    .pie .pie-half-container .pie-half {
       clip: rect(0px, 50px, 100px, 0px); }
-    .timer .timer-half-container.left {
+    .pie .pie-half-container.left {
       -webkit-transform: rotate(180deg);
       -moz-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
       -o-transform: rotate(180deg);
       transform: rotate(180deg); }
 
-.timer[data-minutes="1"] .timer-half.right {
+.pie[data-minutes="1"] .pie-half.right {
   -webkit-transform: rotate(6deg);
   -moz-transform: rotate(6deg);
   -ms-transform: rotate(6deg);
   -o-transform: rotate(6deg);
   transform: rotate(6deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="-1"] .timer-bg {
+.pie[data-minutes="-1"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-1"] .timer-half.left {
+.pie[data-minutes="-1"] .pie-half.left {
   -webkit-transform: rotate(-6deg);
   -moz-transform: rotate(-6deg);
   -ms-transform: rotate(-6deg);
   -o-transform: rotate(-6deg);
   transform: rotate(-6deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="2"] .timer-half.right {
+.pie[data-minutes="2"] .pie-half.right {
   -webkit-transform: rotate(12deg);
   -moz-transform: rotate(12deg);
   -ms-transform: rotate(12deg);
   -o-transform: rotate(12deg);
   transform: rotate(12deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="-2"] .timer-bg {
+.pie[data-minutes="-2"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-2"] .timer-half.left {
+.pie[data-minutes="-2"] .pie-half.left {
   -webkit-transform: rotate(-12deg);
   -moz-transform: rotate(-12deg);
   -ms-transform: rotate(-12deg);
   -o-transform: rotate(-12deg);
   transform: rotate(-12deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="3"] .timer-half.right {
+.pie[data-minutes="3"] .pie-half.right {
   -webkit-transform: rotate(18deg);
   -moz-transform: rotate(18deg);
   -ms-transform: rotate(18deg);
   -o-transform: rotate(18deg);
   transform: rotate(18deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="-3"] .timer-bg {
+.pie[data-minutes="-3"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-3"] .timer-half.left {
+.pie[data-minutes="-3"] .pie-half.left {
   -webkit-transform: rotate(-18deg);
   -moz-transform: rotate(-18deg);
   -ms-transform: rotate(-18deg);
   -o-transform: rotate(-18deg);
   transform: rotate(-18deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="4"] .timer-half.right {
+.pie[data-minutes="4"] .pie-half.right {
   -webkit-transform: rotate(24deg);
   -moz-transform: rotate(24deg);
   -ms-transform: rotate(24deg);
   -o-transform: rotate(24deg);
   transform: rotate(24deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="-4"] .timer-bg {
+.pie[data-minutes="-4"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-4"] .timer-half.left {
+.pie[data-minutes="-4"] .pie-half.left {
   -webkit-transform: rotate(-24deg);
   -moz-transform: rotate(-24deg);
   -ms-transform: rotate(-24deg);
   -o-transform: rotate(-24deg);
   transform: rotate(-24deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="5"] .timer-half.right {
+.pie[data-minutes="5"] .pie-half.right {
   -webkit-transform: rotate(30deg);
   -moz-transform: rotate(30deg);
   -ms-transform: rotate(30deg);
   -o-transform: rotate(30deg);
   transform: rotate(30deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="-5"] .timer-bg {
+.pie[data-minutes="-5"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-5"] .timer-half.left {
+.pie[data-minutes="-5"] .pie-half.left {
   -webkit-transform: rotate(-30deg);
   -moz-transform: rotate(-30deg);
   -ms-transform: rotate(-30deg);
   -o-transform: rotate(-30deg);
   transform: rotate(-30deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="6"] .timer-half.right {
+.pie[data-minutes="6"] .pie-half.right {
   -webkit-transform: rotate(36deg);
   -moz-transform: rotate(36deg);
   -ms-transform: rotate(36deg);
   -o-transform: rotate(36deg);
   transform: rotate(36deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="-6"] .timer-bg {
+.pie[data-minutes="-6"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-6"] .timer-half.left {
+.pie[data-minutes="-6"] .pie-half.left {
   -webkit-transform: rotate(-36deg);
   -moz-transform: rotate(-36deg);
   -ms-transform: rotate(-36deg);
   -o-transform: rotate(-36deg);
   transform: rotate(-36deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="7"] .timer-half.right {
+.pie[data-minutes="7"] .pie-half.right {
   -webkit-transform: rotate(42deg);
   -moz-transform: rotate(42deg);
   -ms-transform: rotate(42deg);
   -o-transform: rotate(42deg);
   transform: rotate(42deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="-7"] .timer-bg {
+.pie[data-minutes="-7"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-7"] .timer-half.left {
+.pie[data-minutes="-7"] .pie-half.left {
   -webkit-transform: rotate(-42deg);
   -moz-transform: rotate(-42deg);
   -ms-transform: rotate(-42deg);
   -o-transform: rotate(-42deg);
   transform: rotate(-42deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="8"] .timer-half.right {
+.pie[data-minutes="8"] .pie-half.right {
   -webkit-transform: rotate(48deg);
   -moz-transform: rotate(48deg);
   -ms-transform: rotate(48deg);
   -o-transform: rotate(48deg);
   transform: rotate(48deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="-8"] .timer-bg {
+.pie[data-minutes="-8"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-8"] .timer-half.left {
+.pie[data-minutes="-8"] .pie-half.left {
   -webkit-transform: rotate(-48deg);
   -moz-transform: rotate(-48deg);
   -ms-transform: rotate(-48deg);
   -o-transform: rotate(-48deg);
   transform: rotate(-48deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="9"] .timer-half.right {
+.pie[data-minutes="9"] .pie-half.right {
   -webkit-transform: rotate(54deg);
   -moz-transform: rotate(54deg);
   -ms-transform: rotate(54deg);
   -o-transform: rotate(54deg);
   transform: rotate(54deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="-9"] .timer-bg {
+.pie[data-minutes="-9"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-9"] .timer-half.left {
+.pie[data-minutes="-9"] .pie-half.left {
   -webkit-transform: rotate(-54deg);
   -moz-transform: rotate(-54deg);
   -ms-transform: rotate(-54deg);
   -o-transform: rotate(-54deg);
   transform: rotate(-54deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="10"] .timer-half.right {
+.pie[data-minutes="10"] .pie-half.right {
   -webkit-transform: rotate(60deg);
   -moz-transform: rotate(60deg);
   -ms-transform: rotate(60deg);
   -o-transform: rotate(60deg);
   transform: rotate(60deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="-10"] .timer-bg {
+.pie[data-minutes="-10"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-10"] .timer-half.left {
+.pie[data-minutes="-10"] .pie-half.left {
   -webkit-transform: rotate(-60deg);
   -moz-transform: rotate(-60deg);
   -ms-transform: rotate(-60deg);
   -o-transform: rotate(-60deg);
   transform: rotate(-60deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="11"] .timer-half.right {
+.pie[data-minutes="11"] .pie-half.right {
   -webkit-transform: rotate(66deg);
   -moz-transform: rotate(66deg);
   -ms-transform: rotate(66deg);
   -o-transform: rotate(66deg);
   transform: rotate(66deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="-11"] .timer-bg {
+.pie[data-minutes="-11"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-11"] .timer-half.left {
+.pie[data-minutes="-11"] .pie-half.left {
   -webkit-transform: rotate(-66deg);
   -moz-transform: rotate(-66deg);
   -ms-transform: rotate(-66deg);
   -o-transform: rotate(-66deg);
   transform: rotate(-66deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="12"] .timer-half.right {
+.pie[data-minutes="12"] .pie-half.right {
   -webkit-transform: rotate(72deg);
   -moz-transform: rotate(72deg);
   -ms-transform: rotate(72deg);
   -o-transform: rotate(72deg);
   transform: rotate(72deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="-12"] .timer-bg {
+.pie[data-minutes="-12"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-12"] .timer-half.left {
+.pie[data-minutes="-12"] .pie-half.left {
   -webkit-transform: rotate(-72deg);
   -moz-transform: rotate(-72deg);
   -ms-transform: rotate(-72deg);
   -o-transform: rotate(-72deg);
   transform: rotate(-72deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="13"] .timer-half.right {
+.pie[data-minutes="13"] .pie-half.right {
   -webkit-transform: rotate(78deg);
   -moz-transform: rotate(78deg);
   -ms-transform: rotate(78deg);
   -o-transform: rotate(78deg);
   transform: rotate(78deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="-13"] .timer-bg {
+.pie[data-minutes="-13"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-13"] .timer-half.left {
+.pie[data-minutes="-13"] .pie-half.left {
   -webkit-transform: rotate(-78deg);
   -moz-transform: rotate(-78deg);
   -ms-transform: rotate(-78deg);
   -o-transform: rotate(-78deg);
   transform: rotate(-78deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="14"] .timer-half.right {
+.pie[data-minutes="14"] .pie-half.right {
   -webkit-transform: rotate(84deg);
   -moz-transform: rotate(84deg);
   -ms-transform: rotate(84deg);
   -o-transform: rotate(84deg);
   transform: rotate(84deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="-14"] .timer-bg {
+.pie[data-minutes="-14"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-14"] .timer-half.left {
+.pie[data-minutes="-14"] .pie-half.left {
   -webkit-transform: rotate(-84deg);
   -moz-transform: rotate(-84deg);
   -ms-transform: rotate(-84deg);
   -o-transform: rotate(-84deg);
   transform: rotate(-84deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="15"] .timer-half.right {
+.pie[data-minutes="15"] .pie-half.right {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
-  border: 6px solid #66BB6A; }
+  background-color: #66BB6A; }
 
-.timer[data-minutes="-15"] .timer-bg {
+.pie[data-minutes="-15"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-15"] .timer-half.left {
+.pie[data-minutes="-15"] .pie-half.left {
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
   transform: rotate(-90deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="16"] .timer-half.right {
+.pie[data-minutes="16"] .pie-half.right {
   -webkit-transform: rotate(96deg);
   -moz-transform: rotate(96deg);
   -ms-transform: rotate(96deg);
   -o-transform: rotate(96deg);
   transform: rotate(96deg);
-  border: 6px solid #66BB6A; }
+  background-color: #66BB6A; }
 
-.timer[data-minutes="-16"] .timer-bg {
+.pie[data-minutes="-16"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-16"] .timer-half.left {
+.pie[data-minutes="-16"] .pie-half.left {
   -webkit-transform: rotate(-96deg);
   -moz-transform: rotate(-96deg);
   -ms-transform: rotate(-96deg);
   -o-transform: rotate(-96deg);
   transform: rotate(-96deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="17"] .timer-half.right {
+.pie[data-minutes="17"] .pie-half.right {
   -webkit-transform: rotate(102deg);
   -moz-transform: rotate(102deg);
   -ms-transform: rotate(102deg);
   -o-transform: rotate(102deg);
   transform: rotate(102deg);
-  border: 6px solid #66BB6A; }
+  background-color: #66BB6A; }
 
-.timer[data-minutes="-17"] .timer-bg {
+.pie[data-minutes="-17"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-17"] .timer-half.left {
+.pie[data-minutes="-17"] .pie-half.left {
   -webkit-transform: rotate(-102deg);
   -moz-transform: rotate(-102deg);
   -ms-transform: rotate(-102deg);
   -o-transform: rotate(-102deg);
   transform: rotate(-102deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="18"] .timer-half.right {
+.pie[data-minutes="18"] .pie-half.right {
   -webkit-transform: rotate(108deg);
   -moz-transform: rotate(108deg);
   -ms-transform: rotate(108deg);
   -o-transform: rotate(108deg);
   transform: rotate(108deg);
-  border: 6px solid #66BB6A; }
+  background-color: #66BB6A; }
 
-.timer[data-minutes="-18"] .timer-bg {
+.pie[data-minutes="-18"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-18"] .timer-half.left {
+.pie[data-minutes="-18"] .pie-half.left {
   -webkit-transform: rotate(-108deg);
   -moz-transform: rotate(-108deg);
   -ms-transform: rotate(-108deg);
   -o-transform: rotate(-108deg);
   transform: rotate(-108deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="19"] .timer-half.right {
+.pie[data-minutes="19"] .pie-half.right {
   -webkit-transform: rotate(114deg);
   -moz-transform: rotate(114deg);
   -ms-transform: rotate(114deg);
   -o-transform: rotate(114deg);
   transform: rotate(114deg);
-  border: 6px solid #66BB6A; }
+  background-color: #66BB6A; }
 
-.timer[data-minutes="-19"] .timer-bg {
+.pie[data-minutes="-19"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-19"] .timer-half.left {
+.pie[data-minutes="-19"] .pie-half.left {
   -webkit-transform: rotate(-114deg);
   -moz-transform: rotate(-114deg);
   -ms-transform: rotate(-114deg);
   -o-transform: rotate(-114deg);
   transform: rotate(-114deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="20"] .timer-half.right {
+.pie[data-minutes="20"] .pie-half.right {
   -webkit-transform: rotate(120deg);
   -moz-transform: rotate(120deg);
   -ms-transform: rotate(120deg);
   -o-transform: rotate(120deg);
   transform: rotate(120deg);
-  border: 6px solid #66BB6A; }
+  background-color: #66BB6A; }
 
-.timer[data-minutes="-20"] .timer-bg {
+.pie[data-minutes="-20"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-20"] .timer-half.left {
+.pie[data-minutes="-20"] .pie-half.left {
   -webkit-transform: rotate(-120deg);
   -moz-transform: rotate(-120deg);
   -ms-transform: rotate(-120deg);
   -o-transform: rotate(-120deg);
   transform: rotate(-120deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="21"] .timer-half.right {
+.pie[data-minutes="21"] .pie-half.right {
   -webkit-transform: rotate(126deg);
   -moz-transform: rotate(126deg);
   -ms-transform: rotate(126deg);
   -o-transform: rotate(126deg);
   transform: rotate(126deg);
-  border: 6px solid #66BB6A; }
+  background-color: #66BB6A; }
 
-.timer[data-minutes="-21"] .timer-bg {
+.pie[data-minutes="-21"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-21"] .timer-half.left {
+.pie[data-minutes="-21"] .pie-half.left {
   -webkit-transform: rotate(-126deg);
   -moz-transform: rotate(-126deg);
   -ms-transform: rotate(-126deg);
   -o-transform: rotate(-126deg);
   transform: rotate(-126deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="22"] .timer-half.right {
+.pie[data-minutes="22"] .pie-half.right {
   -webkit-transform: rotate(132deg);
   -moz-transform: rotate(132deg);
   -ms-transform: rotate(132deg);
   -o-transform: rotate(132deg);
   transform: rotate(132deg);
-  border: 6px solid #66BB6A; }
+  background-color: #66BB6A; }
 
-.timer[data-minutes="-22"] .timer-bg {
+.pie[data-minutes="-22"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-22"] .timer-half.left {
+.pie[data-minutes="-22"] .pie-half.left {
   -webkit-transform: rotate(-132deg);
   -moz-transform: rotate(-132deg);
   -ms-transform: rotate(-132deg);
   -o-transform: rotate(-132deg);
   transform: rotate(-132deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="23"] .timer-half.right {
+.pie[data-minutes="23"] .pie-half.right {
   -webkit-transform: rotate(138deg);
   -moz-transform: rotate(138deg);
   -ms-transform: rotate(138deg);
   -o-transform: rotate(138deg);
   transform: rotate(138deg);
-  border: 6px solid #66BB6A; }
+  background-color: #66BB6A; }
 
-.timer[data-minutes="-23"] .timer-bg {
+.pie[data-minutes="-23"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-23"] .timer-half.left {
+.pie[data-minutes="-23"] .pie-half.left {
   -webkit-transform: rotate(-138deg);
   -moz-transform: rotate(-138deg);
   -ms-transform: rotate(-138deg);
   -o-transform: rotate(-138deg);
   transform: rotate(-138deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="24"] .timer-half.right {
+.pie[data-minutes="24"] .pie-half.right {
   -webkit-transform: rotate(144deg);
   -moz-transform: rotate(144deg);
   -ms-transform: rotate(144deg);
   -o-transform: rotate(144deg);
   transform: rotate(144deg);
-  border: 6px solid #66BB6A; }
+  background-color: #66BB6A; }
 
-.timer[data-minutes="-24"] .timer-bg {
+.pie[data-minutes="-24"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-24"] .timer-half.left {
+.pie[data-minutes="-24"] .pie-half.left {
   -webkit-transform: rotate(-144deg);
   -moz-transform: rotate(-144deg);
   -ms-transform: rotate(-144deg);
   -o-transform: rotate(-144deg);
   transform: rotate(-144deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="25"] .timer-half.right {
+.pie[data-minutes="25"] .pie-half.right {
   -webkit-transform: rotate(150deg);
   -moz-transform: rotate(150deg);
   -ms-transform: rotate(150deg);
   -o-transform: rotate(150deg);
   transform: rotate(150deg);
-  border: 6px solid #66BB6A; }
+  background-color: #66BB6A; }
 
-.timer[data-minutes="-25"] .timer-bg {
+.pie[data-minutes="-25"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-25"] .timer-half.left {
+.pie[data-minutes="-25"] .pie-half.left {
   -webkit-transform: rotate(-150deg);
   -moz-transform: rotate(-150deg);
   -ms-transform: rotate(-150deg);
   -o-transform: rotate(-150deg);
   transform: rotate(-150deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="26"] .timer-half.right {
+.pie[data-minutes="26"] .pie-half.right {
   -webkit-transform: rotate(156deg);
   -moz-transform: rotate(156deg);
   -ms-transform: rotate(156deg);
   -o-transform: rotate(156deg);
   transform: rotate(156deg);
-  border: 6px solid #66BB6A; }
+  background-color: #66BB6A; }
 
-.timer[data-minutes="-26"] .timer-bg {
+.pie[data-minutes="-26"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-26"] .timer-half.left {
+.pie[data-minutes="-26"] .pie-half.left {
   -webkit-transform: rotate(-156deg);
   -moz-transform: rotate(-156deg);
   -ms-transform: rotate(-156deg);
   -o-transform: rotate(-156deg);
   transform: rotate(-156deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="27"] .timer-half.right {
+.pie[data-minutes="27"] .pie-half.right {
   -webkit-transform: rotate(162deg);
   -moz-transform: rotate(162deg);
   -ms-transform: rotate(162deg);
   -o-transform: rotate(162deg);
   transform: rotate(162deg);
-  border: 6px solid #66BB6A; }
+  background-color: #66BB6A; }
 
-.timer[data-minutes="-27"] .timer-bg {
+.pie[data-minutes="-27"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-27"] .timer-half.left {
+.pie[data-minutes="-27"] .pie-half.left {
   -webkit-transform: rotate(-162deg);
   -moz-transform: rotate(-162deg);
   -ms-transform: rotate(-162deg);
   -o-transform: rotate(-162deg);
   transform: rotate(-162deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="28"] .timer-half.right {
+.pie[data-minutes="28"] .pie-half.right {
   -webkit-transform: rotate(168deg);
   -moz-transform: rotate(168deg);
   -ms-transform: rotate(168deg);
   -o-transform: rotate(168deg);
   transform: rotate(168deg);
-  border: 6px solid #66BB6A; }
+  background-color: #66BB6A; }
 
-.timer[data-minutes="-28"] .timer-bg {
+.pie[data-minutes="-28"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-28"] .timer-half.left {
+.pie[data-minutes="-28"] .pie-half.left {
   -webkit-transform: rotate(-168deg);
   -moz-transform: rotate(-168deg);
   -ms-transform: rotate(-168deg);
   -o-transform: rotate(-168deg);
   transform: rotate(-168deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="29"] .timer-half.right {
+.pie[data-minutes="29"] .pie-half.right {
   -webkit-transform: rotate(174deg);
   -moz-transform: rotate(174deg);
   -ms-transform: rotate(174deg);
   -o-transform: rotate(174deg);
   transform: rotate(174deg);
-  border: 6px solid #66BB6A; }
+  background-color: #66BB6A; }
 
-.timer[data-minutes="-29"] .timer-bg {
+.pie[data-minutes="-29"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-29"] .timer-half.left {
+.pie[data-minutes="-29"] .pie-half.left {
   -webkit-transform: rotate(-174deg);
   -moz-transform: rotate(-174deg);
   -ms-transform: rotate(-174deg);
   -o-transform: rotate(-174deg);
   transform: rotate(-174deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="30"] .timer-half.right {
+.pie[data-minutes="30"] .pie-half.right {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
-  border: 6px solid #66BB6A; }
+  background-color: #66BB6A; }
 
-.timer[data-minutes="-30"] .timer-bg {
+.pie[data-minutes="-30"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-30"] .timer-half.left {
+.pie[data-minutes="-30"] .pie-half.left {
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg);
-  border: 6px solid #E57373; }
+  background-color: #E57373; }
 
-.timer[data-minutes="31"] .timer-half.right {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="31"] .pie-half.right {
+  background-color: #66BB6A;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg); }
-.timer[data-minutes="31"] .timer-half.left {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="31"] .pie-half.left {
+  background-color: #66BB6A;
   -webkit-transform: rotate(6deg);
   -moz-transform: rotate(6deg);
   -ms-transform: rotate(6deg);
   -o-transform: rotate(6deg);
   transform: rotate(6deg); }
 
-.timer[data-minutes="-31"] .timer-bg {
+.pie[data-minutes="-31"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-31"] .timer-half.right {
-  border: 6px solid #E57373;
+.pie[data-minutes="-31"] .pie-half.right {
+  background-color: #E57373;
   -webkit-transform: rotate(-6deg);
   -moz-transform: rotate(-6deg);
   -ms-transform: rotate(-6deg);
   -o-transform: rotate(-6deg);
   transform: rotate(-6deg); }
-.timer[data-minutes="-31"] .timer-half.left {
-  border: 6px solid #E57373;
+.pie[data-minutes="-31"] .pie-half.left {
+  background-color: #E57373;
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg); }
 
-.timer[data-minutes="32"] .timer-half.right {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="32"] .pie-half.right {
+  background-color: #66BB6A;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg); }
-.timer[data-minutes="32"] .timer-half.left {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="32"] .pie-half.left {
+  background-color: #66BB6A;
   -webkit-transform: rotate(12deg);
   -moz-transform: rotate(12deg);
   -ms-transform: rotate(12deg);
   -o-transform: rotate(12deg);
   transform: rotate(12deg); }
 
-.timer[data-minutes="-32"] .timer-bg {
+.pie[data-minutes="-32"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-32"] .timer-half.right {
-  border: 6px solid #E57373;
+.pie[data-minutes="-32"] .pie-half.right {
+  background-color: #E57373;
   -webkit-transform: rotate(-12deg);
   -moz-transform: rotate(-12deg);
   -ms-transform: rotate(-12deg);
   -o-transform: rotate(-12deg);
   transform: rotate(-12deg); }
-.timer[data-minutes="-32"] .timer-half.left {
-  border: 6px solid #E57373;
+.pie[data-minutes="-32"] .pie-half.left {
+  background-color: #E57373;
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg); }
 
-.timer[data-minutes="33"] .timer-half.right {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="33"] .pie-half.right {
+  background-color: #66BB6A;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg); }
-.timer[data-minutes="33"] .timer-half.left {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="33"] .pie-half.left {
+  background-color: #66BB6A;
   -webkit-transform: rotate(18deg);
   -moz-transform: rotate(18deg);
   -ms-transform: rotate(18deg);
   -o-transform: rotate(18deg);
   transform: rotate(18deg); }
 
-.timer[data-minutes="-33"] .timer-bg {
+.pie[data-minutes="-33"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-33"] .timer-half.right {
-  border: 6px solid #E57373;
+.pie[data-minutes="-33"] .pie-half.right {
+  background-color: #E57373;
   -webkit-transform: rotate(-18deg);
   -moz-transform: rotate(-18deg);
   -ms-transform: rotate(-18deg);
   -o-transform: rotate(-18deg);
   transform: rotate(-18deg); }
-.timer[data-minutes="-33"] .timer-half.left {
-  border: 6px solid #E57373;
+.pie[data-minutes="-33"] .pie-half.left {
+  background-color: #E57373;
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg); }
 
-.timer[data-minutes="34"] .timer-half.right {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="34"] .pie-half.right {
+  background-color: #66BB6A;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg); }
-.timer[data-minutes="34"] .timer-half.left {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="34"] .pie-half.left {
+  background-color: #66BB6A;
   -webkit-transform: rotate(24deg);
   -moz-transform: rotate(24deg);
   -ms-transform: rotate(24deg);
   -o-transform: rotate(24deg);
   transform: rotate(24deg); }
 
-.timer[data-minutes="-34"] .timer-bg {
+.pie[data-minutes="-34"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-34"] .timer-half.right {
-  border: 6px solid #E57373;
+.pie[data-minutes="-34"] .pie-half.right {
+  background-color: #E57373;
   -webkit-transform: rotate(-24deg);
   -moz-transform: rotate(-24deg);
   -ms-transform: rotate(-24deg);
   -o-transform: rotate(-24deg);
   transform: rotate(-24deg); }
-.timer[data-minutes="-34"] .timer-half.left {
-  border: 6px solid #E57373;
+.pie[data-minutes="-34"] .pie-half.left {
+  background-color: #E57373;
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg); }
 
-.timer[data-minutes="35"] .timer-half.right {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="35"] .pie-half.right {
+  background-color: #66BB6A;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg); }
-.timer[data-minutes="35"] .timer-half.left {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="35"] .pie-half.left {
+  background-color: #66BB6A;
   -webkit-transform: rotate(30deg);
   -moz-transform: rotate(30deg);
   -ms-transform: rotate(30deg);
   -o-transform: rotate(30deg);
   transform: rotate(30deg); }
 
-.timer[data-minutes="-35"] .timer-bg {
+.pie[data-minutes="-35"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-35"] .timer-half.right {
-  border: 6px solid #E57373;
+.pie[data-minutes="-35"] .pie-half.right {
+  background-color: #E57373;
   -webkit-transform: rotate(-30deg);
   -moz-transform: rotate(-30deg);
   -ms-transform: rotate(-30deg);
   -o-transform: rotate(-30deg);
   transform: rotate(-30deg); }
-.timer[data-minutes="-35"] .timer-half.left {
-  border: 6px solid #E57373;
+.pie[data-minutes="-35"] .pie-half.left {
+  background-color: #E57373;
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg); }
 
-.timer[data-minutes="36"] .timer-half.right {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="36"] .pie-half.right {
+  background-color: #66BB6A;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg); }
-.timer[data-minutes="36"] .timer-half.left {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="36"] .pie-half.left {
+  background-color: #66BB6A;
   -webkit-transform: rotate(36deg);
   -moz-transform: rotate(36deg);
   -ms-transform: rotate(36deg);
   -o-transform: rotate(36deg);
   transform: rotate(36deg); }
 
-.timer[data-minutes="-36"] .timer-bg {
+.pie[data-minutes="-36"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-36"] .timer-half.right {
-  border: 6px solid #E57373;
+.pie[data-minutes="-36"] .pie-half.right {
+  background-color: #E57373;
   -webkit-transform: rotate(-36deg);
   -moz-transform: rotate(-36deg);
   -ms-transform: rotate(-36deg);
   -o-transform: rotate(-36deg);
   transform: rotate(-36deg); }
-.timer[data-minutes="-36"] .timer-half.left {
-  border: 6px solid #E57373;
+.pie[data-minutes="-36"] .pie-half.left {
+  background-color: #E57373;
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg); }
 
-.timer[data-minutes="37"] .timer-half.right {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="37"] .pie-half.right {
+  background-color: #66BB6A;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg); }
-.timer[data-minutes="37"] .timer-half.left {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="37"] .pie-half.left {
+  background-color: #66BB6A;
   -webkit-transform: rotate(42deg);
   -moz-transform: rotate(42deg);
   -ms-transform: rotate(42deg);
   -o-transform: rotate(42deg);
   transform: rotate(42deg); }
 
-.timer[data-minutes="-37"] .timer-bg {
+.pie[data-minutes="-37"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-37"] .timer-half.right {
-  border: 6px solid #E57373;
+.pie[data-minutes="-37"] .pie-half.right {
+  background-color: #E57373;
   -webkit-transform: rotate(-42deg);
   -moz-transform: rotate(-42deg);
   -ms-transform: rotate(-42deg);
   -o-transform: rotate(-42deg);
   transform: rotate(-42deg); }
-.timer[data-minutes="-37"] .timer-half.left {
-  border: 6px solid #E57373;
+.pie[data-minutes="-37"] .pie-half.left {
+  background-color: #E57373;
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg); }
 
-.timer[data-minutes="38"] .timer-half.right {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="38"] .pie-half.right {
+  background-color: #66BB6A;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg); }
-.timer[data-minutes="38"] .timer-half.left {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="38"] .pie-half.left {
+  background-color: #66BB6A;
   -webkit-transform: rotate(48deg);
   -moz-transform: rotate(48deg);
   -ms-transform: rotate(48deg);
   -o-transform: rotate(48deg);
   transform: rotate(48deg); }
 
-.timer[data-minutes="-38"] .timer-bg {
+.pie[data-minutes="-38"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-38"] .timer-half.right {
-  border: 6px solid #E57373;
+.pie[data-minutes="-38"] .pie-half.right {
+  background-color: #E57373;
   -webkit-transform: rotate(-48deg);
   -moz-transform: rotate(-48deg);
   -ms-transform: rotate(-48deg);
   -o-transform: rotate(-48deg);
   transform: rotate(-48deg); }
-.timer[data-minutes="-38"] .timer-half.left {
-  border: 6px solid #E57373;
+.pie[data-minutes="-38"] .pie-half.left {
+  background-color: #E57373;
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg); }
 
-.timer[data-minutes="39"] .timer-half.right {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="39"] .pie-half.right {
+  background-color: #66BB6A;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg); }
-.timer[data-minutes="39"] .timer-half.left {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="39"] .pie-half.left {
+  background-color: #66BB6A;
   -webkit-transform: rotate(54deg);
   -moz-transform: rotate(54deg);
   -ms-transform: rotate(54deg);
   -o-transform: rotate(54deg);
   transform: rotate(54deg); }
 
-.timer[data-minutes="-39"] .timer-bg {
+.pie[data-minutes="-39"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-39"] .timer-half.right {
-  border: 6px solid #E57373;
+.pie[data-minutes="-39"] .pie-half.right {
+  background-color: #E57373;
   -webkit-transform: rotate(-54deg);
   -moz-transform: rotate(-54deg);
   -ms-transform: rotate(-54deg);
   -o-transform: rotate(-54deg);
   transform: rotate(-54deg); }
-.timer[data-minutes="-39"] .timer-half.left {
-  border: 6px solid #E57373;
+.pie[data-minutes="-39"] .pie-half.left {
+  background-color: #E57373;
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg); }
 
-.timer[data-minutes="40"] .timer-half.right {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="40"] .pie-half.right {
+  background-color: #66BB6A;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg); }
-.timer[data-minutes="40"] .timer-half.left {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="40"] .pie-half.left {
+  background-color: #66BB6A;
   -webkit-transform: rotate(60deg);
   -moz-transform: rotate(60deg);
   -ms-transform: rotate(60deg);
   -o-transform: rotate(60deg);
   transform: rotate(60deg); }
 
-.timer[data-minutes="-40"] .timer-bg {
+.pie[data-minutes="-40"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-40"] .timer-half.right {
-  border: 6px solid #E57373;
+.pie[data-minutes="-40"] .pie-half.right {
+  background-color: #E57373;
   -webkit-transform: rotate(-60deg);
   -moz-transform: rotate(-60deg);
   -ms-transform: rotate(-60deg);
   -o-transform: rotate(-60deg);
   transform: rotate(-60deg); }
-.timer[data-minutes="-40"] .timer-half.left {
-  border: 6px solid #E57373;
+.pie[data-minutes="-40"] .pie-half.left {
+  background-color: #E57373;
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg); }
 
-.timer[data-minutes="41"] .timer-half.right {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="41"] .pie-half.right {
+  background-color: #66BB6A;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg); }
-.timer[data-minutes="41"] .timer-half.left {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="41"] .pie-half.left {
+  background-color: #66BB6A;
   -webkit-transform: rotate(66deg);
   -moz-transform: rotate(66deg);
   -ms-transform: rotate(66deg);
   -o-transform: rotate(66deg);
   transform: rotate(66deg); }
 
-.timer[data-minutes="-41"] .timer-bg {
+.pie[data-minutes="-41"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-41"] .timer-half.right {
-  border: 6px solid #E57373;
+.pie[data-minutes="-41"] .pie-half.right {
+  background-color: #E57373;
   -webkit-transform: rotate(-66deg);
   -moz-transform: rotate(-66deg);
   -ms-transform: rotate(-66deg);
   -o-transform: rotate(-66deg);
   transform: rotate(-66deg); }
-.timer[data-minutes="-41"] .timer-half.left {
-  border: 6px solid #E57373;
+.pie[data-minutes="-41"] .pie-half.left {
+  background-color: #E57373;
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg); }
 
-.timer[data-minutes="42"] .timer-half.right {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="42"] .pie-half.right {
+  background-color: #66BB6A;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg); }
-.timer[data-minutes="42"] .timer-half.left {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="42"] .pie-half.left {
+  background-color: #66BB6A;
   -webkit-transform: rotate(72deg);
   -moz-transform: rotate(72deg);
   -ms-transform: rotate(72deg);
   -o-transform: rotate(72deg);
   transform: rotate(72deg); }
 
-.timer[data-minutes="-42"] .timer-bg {
+.pie[data-minutes="-42"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-42"] .timer-half.right {
-  border: 6px solid #E57373;
+.pie[data-minutes="-42"] .pie-half.right {
+  background-color: #E57373;
   -webkit-transform: rotate(-72deg);
   -moz-transform: rotate(-72deg);
   -ms-transform: rotate(-72deg);
   -o-transform: rotate(-72deg);
   transform: rotate(-72deg); }
-.timer[data-minutes="-42"] .timer-half.left {
-  border: 6px solid #E57373;
+.pie[data-minutes="-42"] .pie-half.left {
+  background-color: #E57373;
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg); }
 
-.timer[data-minutes="43"] .timer-half.right {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="43"] .pie-half.right {
+  background-color: #66BB6A;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg); }
-.timer[data-minutes="43"] .timer-half.left {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="43"] .pie-half.left {
+  background-color: #66BB6A;
   -webkit-transform: rotate(78deg);
   -moz-transform: rotate(78deg);
   -ms-transform: rotate(78deg);
   -o-transform: rotate(78deg);
   transform: rotate(78deg); }
 
-.timer[data-minutes="-43"] .timer-bg {
+.pie[data-minutes="-43"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-43"] .timer-half.right {
-  border: 6px solid #E57373;
+.pie[data-minutes="-43"] .pie-half.right {
+  background-color: #E57373;
   -webkit-transform: rotate(-78deg);
   -moz-transform: rotate(-78deg);
   -ms-transform: rotate(-78deg);
   -o-transform: rotate(-78deg);
   transform: rotate(-78deg); }
-.timer[data-minutes="-43"] .timer-half.left {
-  border: 6px solid #E57373;
+.pie[data-minutes="-43"] .pie-half.left {
+  background-color: #E57373;
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg); }
 
-.timer[data-minutes="44"] .timer-half.right {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="44"] .pie-half.right {
+  background-color: #66BB6A;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg); }
-.timer[data-minutes="44"] .timer-half.left {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="44"] .pie-half.left {
+  background-color: #66BB6A;
   -webkit-transform: rotate(84deg);
   -moz-transform: rotate(84deg);
   -ms-transform: rotate(84deg);
   -o-transform: rotate(84deg);
   transform: rotate(84deg); }
 
-.timer[data-minutes="-44"] .timer-bg {
+.pie[data-minutes="-44"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-44"] .timer-half.right {
-  border: 6px solid #E57373;
+.pie[data-minutes="-44"] .pie-half.right {
+  background-color: #E57373;
   -webkit-transform: rotate(-84deg);
   -moz-transform: rotate(-84deg);
   -ms-transform: rotate(-84deg);
   -o-transform: rotate(-84deg);
   transform: rotate(-84deg); }
-.timer[data-minutes="-44"] .timer-half.left {
-  border: 6px solid #E57373;
+.pie[data-minutes="-44"] .pie-half.left {
+  background-color: #E57373;
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg); }
 
-.timer[data-minutes="45"] .timer-half.right {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="45"] .pie-half.right {
+  background-color: #66BB6A;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg); }
-.timer[data-minutes="45"] .timer-half.left {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="45"] .pie-half.left {
+  background-color: #66BB6A;
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   -o-transform: rotate(90deg);
   transform: rotate(90deg); }
 
-.timer[data-minutes="-45"] .timer-bg {
+.pie[data-minutes="-45"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-45"] .timer-half.right {
-  border: 6px solid #E57373;
+.pie[data-minutes="-45"] .pie-half.right {
+  background-color: #E57373;
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
   transform: rotate(-90deg); }
-.timer[data-minutes="-45"] .timer-half.left {
-  border: 6px solid #E57373;
+.pie[data-minutes="-45"] .pie-half.left {
+  background-color: #E57373;
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg); }
 
-.timer[data-minutes="46"] .timer-half.right {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="46"] .pie-half.right {
+  background-color: #66BB6A;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg); }
-.timer[data-minutes="46"] .timer-half.left {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="46"] .pie-half.left {
+  background-color: #66BB6A;
   -webkit-transform: rotate(96deg);
   -moz-transform: rotate(96deg);
   -ms-transform: rotate(96deg);
   -o-transform: rotate(96deg);
   transform: rotate(96deg); }
 
-.timer[data-minutes="-46"] .timer-bg {
+.pie[data-minutes="-46"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-46"] .timer-half.right {
-  border: 6px solid #E57373;
+.pie[data-minutes="-46"] .pie-half.right {
+  background-color: #E57373;
   -webkit-transform: rotate(-96deg);
   -moz-transform: rotate(-96deg);
   -ms-transform: rotate(-96deg);
   -o-transform: rotate(-96deg);
   transform: rotate(-96deg); }
-.timer[data-minutes="-46"] .timer-half.left {
-  border: 6px solid #E57373;
+.pie[data-minutes="-46"] .pie-half.left {
+  background-color: #E57373;
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg); }
 
-.timer[data-minutes="47"] .timer-half.right {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="47"] .pie-half.right {
+  background-color: #66BB6A;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg); }
-.timer[data-minutes="47"] .timer-half.left {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="47"] .pie-half.left {
+  background-color: #66BB6A;
   -webkit-transform: rotate(102deg);
   -moz-transform: rotate(102deg);
   -ms-transform: rotate(102deg);
   -o-transform: rotate(102deg);
   transform: rotate(102deg); }
 
-.timer[data-minutes="-47"] .timer-bg {
+.pie[data-minutes="-47"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-47"] .timer-half.right {
-  border: 6px solid #E57373;
+.pie[data-minutes="-47"] .pie-half.right {
+  background-color: #E57373;
   -webkit-transform: rotate(-102deg);
   -moz-transform: rotate(-102deg);
   -ms-transform: rotate(-102deg);
   -o-transform: rotate(-102deg);
   transform: rotate(-102deg); }
-.timer[data-minutes="-47"] .timer-half.left {
-  border: 6px solid #E57373;
+.pie[data-minutes="-47"] .pie-half.left {
+  background-color: #E57373;
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg); }
 
-.timer[data-minutes="48"] .timer-half.right {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="48"] .pie-half.right {
+  background-color: #66BB6A;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg); }
-.timer[data-minutes="48"] .timer-half.left {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="48"] .pie-half.left {
+  background-color: #66BB6A;
   -webkit-transform: rotate(108deg);
   -moz-transform: rotate(108deg);
   -ms-transform: rotate(108deg);
   -o-transform: rotate(108deg);
   transform: rotate(108deg); }
 
-.timer[data-minutes="-48"] .timer-bg {
+.pie[data-minutes="-48"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-48"] .timer-half.right {
-  border: 6px solid #E57373;
+.pie[data-minutes="-48"] .pie-half.right {
+  background-color: #E57373;
   -webkit-transform: rotate(-108deg);
   -moz-transform: rotate(-108deg);
   -ms-transform: rotate(-108deg);
   -o-transform: rotate(-108deg);
   transform: rotate(-108deg); }
-.timer[data-minutes="-48"] .timer-half.left {
-  border: 6px solid #E57373;
+.pie[data-minutes="-48"] .pie-half.left {
+  background-color: #E57373;
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg); }
 
-.timer[data-minutes="49"] .timer-half.right {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="49"] .pie-half.right {
+  background-color: #66BB6A;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg); }
-.timer[data-minutes="49"] .timer-half.left {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="49"] .pie-half.left {
+  background-color: #66BB6A;
   -webkit-transform: rotate(114deg);
   -moz-transform: rotate(114deg);
   -ms-transform: rotate(114deg);
   -o-transform: rotate(114deg);
   transform: rotate(114deg); }
 
-.timer[data-minutes="-49"] .timer-bg {
+.pie[data-minutes="-49"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-49"] .timer-half.right {
-  border: 6px solid #E57373;
+.pie[data-minutes="-49"] .pie-half.right {
+  background-color: #E57373;
   -webkit-transform: rotate(-114deg);
   -moz-transform: rotate(-114deg);
   -ms-transform: rotate(-114deg);
   -o-transform: rotate(-114deg);
   transform: rotate(-114deg); }
-.timer[data-minutes="-49"] .timer-half.left {
-  border: 6px solid #E57373;
+.pie[data-minutes="-49"] .pie-half.left {
+  background-color: #E57373;
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg); }
 
-.timer[data-minutes="50"] .timer-half.right {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="50"] .pie-half.right {
+  background-color: #66BB6A;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg); }
-.timer[data-minutes="50"] .timer-half.left {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="50"] .pie-half.left {
+  background-color: #66BB6A;
   -webkit-transform: rotate(120deg);
   -moz-transform: rotate(120deg);
   -ms-transform: rotate(120deg);
   -o-transform: rotate(120deg);
   transform: rotate(120deg); }
 
-.timer[data-minutes="-50"] .timer-bg {
+.pie[data-minutes="-50"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-50"] .timer-half.right {
-  border: 6px solid #E57373;
+.pie[data-minutes="-50"] .pie-half.right {
+  background-color: #E57373;
   -webkit-transform: rotate(-120deg);
   -moz-transform: rotate(-120deg);
   -ms-transform: rotate(-120deg);
   -o-transform: rotate(-120deg);
   transform: rotate(-120deg); }
-.timer[data-minutes="-50"] .timer-half.left {
-  border: 6px solid #E57373;
+.pie[data-minutes="-50"] .pie-half.left {
+  background-color: #E57373;
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg); }
 
-.timer[data-minutes="51"] .timer-half.right {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="51"] .pie-half.right {
+  background-color: #66BB6A;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg); }
-.timer[data-minutes="51"] .timer-half.left {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="51"] .pie-half.left {
+  background-color: #66BB6A;
   -webkit-transform: rotate(126deg);
   -moz-transform: rotate(126deg);
   -ms-transform: rotate(126deg);
   -o-transform: rotate(126deg);
   transform: rotate(126deg); }
 
-.timer[data-minutes="-51"] .timer-bg {
+.pie[data-minutes="-51"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-51"] .timer-half.right {
-  border: 6px solid #E57373;
+.pie[data-minutes="-51"] .pie-half.right {
+  background-color: #E57373;
   -webkit-transform: rotate(-126deg);
   -moz-transform: rotate(-126deg);
   -ms-transform: rotate(-126deg);
   -o-transform: rotate(-126deg);
   transform: rotate(-126deg); }
-.timer[data-minutes="-51"] .timer-half.left {
-  border: 6px solid #E57373;
+.pie[data-minutes="-51"] .pie-half.left {
+  background-color: #E57373;
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg); }
 
-.timer[data-minutes="52"] .timer-half.right {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="52"] .pie-half.right {
+  background-color: #66BB6A;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg); }
-.timer[data-minutes="52"] .timer-half.left {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="52"] .pie-half.left {
+  background-color: #66BB6A;
   -webkit-transform: rotate(132deg);
   -moz-transform: rotate(132deg);
   -ms-transform: rotate(132deg);
   -o-transform: rotate(132deg);
   transform: rotate(132deg); }
 
-.timer[data-minutes="-52"] .timer-bg {
+.pie[data-minutes="-52"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-52"] .timer-half.right {
-  border: 6px solid #E57373;
+.pie[data-minutes="-52"] .pie-half.right {
+  background-color: #E57373;
   -webkit-transform: rotate(-132deg);
   -moz-transform: rotate(-132deg);
   -ms-transform: rotate(-132deg);
   -o-transform: rotate(-132deg);
   transform: rotate(-132deg); }
-.timer[data-minutes="-52"] .timer-half.left {
-  border: 6px solid #E57373;
+.pie[data-minutes="-52"] .pie-half.left {
+  background-color: #E57373;
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg); }
 
-.timer[data-minutes="53"] .timer-half.right {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="53"] .pie-half.right {
+  background-color: #66BB6A;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg); }
-.timer[data-minutes="53"] .timer-half.left {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="53"] .pie-half.left {
+  background-color: #66BB6A;
   -webkit-transform: rotate(138deg);
   -moz-transform: rotate(138deg);
   -ms-transform: rotate(138deg);
   -o-transform: rotate(138deg);
   transform: rotate(138deg); }
 
-.timer[data-minutes="-53"] .timer-bg {
+.pie[data-minutes="-53"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-53"] .timer-half.right {
-  border: 6px solid #E57373;
+.pie[data-minutes="-53"] .pie-half.right {
+  background-color: #E57373;
   -webkit-transform: rotate(-138deg);
   -moz-transform: rotate(-138deg);
   -ms-transform: rotate(-138deg);
   -o-transform: rotate(-138deg);
   transform: rotate(-138deg); }
-.timer[data-minutes="-53"] .timer-half.left {
-  border: 6px solid #E57373;
+.pie[data-minutes="-53"] .pie-half.left {
+  background-color: #E57373;
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg); }
 
-.timer[data-minutes="54"] .timer-half.right {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="54"] .pie-half.right {
+  background-color: #66BB6A;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg); }
-.timer[data-minutes="54"] .timer-half.left {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="54"] .pie-half.left {
+  background-color: #66BB6A;
   -webkit-transform: rotate(144deg);
   -moz-transform: rotate(144deg);
   -ms-transform: rotate(144deg);
   -o-transform: rotate(144deg);
   transform: rotate(144deg); }
 
-.timer[data-minutes="-54"] .timer-bg {
+.pie[data-minutes="-54"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-54"] .timer-half.right {
-  border: 6px solid #E57373;
+.pie[data-minutes="-54"] .pie-half.right {
+  background-color: #E57373;
   -webkit-transform: rotate(-144deg);
   -moz-transform: rotate(-144deg);
   -ms-transform: rotate(-144deg);
   -o-transform: rotate(-144deg);
   transform: rotate(-144deg); }
-.timer[data-minutes="-54"] .timer-half.left {
-  border: 6px solid #E57373;
+.pie[data-minutes="-54"] .pie-half.left {
+  background-color: #E57373;
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg); }
 
-.timer[data-minutes="55"] .timer-half.right {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="55"] .pie-half.right {
+  background-color: #66BB6A;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg); }
-.timer[data-minutes="55"] .timer-half.left {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="55"] .pie-half.left {
+  background-color: #66BB6A;
   -webkit-transform: rotate(150deg);
   -moz-transform: rotate(150deg);
   -ms-transform: rotate(150deg);
   -o-transform: rotate(150deg);
   transform: rotate(150deg); }
 
-.timer[data-minutes="-55"] .timer-bg {
+.pie[data-minutes="-55"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-55"] .timer-half.right {
-  border: 6px solid #E57373;
+.pie[data-minutes="-55"] .pie-half.right {
+  background-color: #E57373;
   -webkit-transform: rotate(-150deg);
   -moz-transform: rotate(-150deg);
   -ms-transform: rotate(-150deg);
   -o-transform: rotate(-150deg);
   transform: rotate(-150deg); }
-.timer[data-minutes="-55"] .timer-half.left {
-  border: 6px solid #E57373;
+.pie[data-minutes="-55"] .pie-half.left {
+  background-color: #E57373;
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg); }
 
-.timer[data-minutes="56"] .timer-half.right {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="56"] .pie-half.right {
+  background-color: #66BB6A;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg); }
-.timer[data-minutes="56"] .timer-half.left {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="56"] .pie-half.left {
+  background-color: #66BB6A;
   -webkit-transform: rotate(156deg);
   -moz-transform: rotate(156deg);
   -ms-transform: rotate(156deg);
   -o-transform: rotate(156deg);
   transform: rotate(156deg); }
 
-.timer[data-minutes="-56"] .timer-bg {
+.pie[data-minutes="-56"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-56"] .timer-half.right {
-  border: 6px solid #E57373;
+.pie[data-minutes="-56"] .pie-half.right {
+  background-color: #E57373;
   -webkit-transform: rotate(-156deg);
   -moz-transform: rotate(-156deg);
   -ms-transform: rotate(-156deg);
   -o-transform: rotate(-156deg);
   transform: rotate(-156deg); }
-.timer[data-minutes="-56"] .timer-half.left {
-  border: 6px solid #E57373;
+.pie[data-minutes="-56"] .pie-half.left {
+  background-color: #E57373;
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg); }
 
-.timer[data-minutes="57"] .timer-half.right {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="57"] .pie-half.right {
+  background-color: #66BB6A;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg); }
-.timer[data-minutes="57"] .timer-half.left {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="57"] .pie-half.left {
+  background-color: #66BB6A;
   -webkit-transform: rotate(162deg);
   -moz-transform: rotate(162deg);
   -ms-transform: rotate(162deg);
   -o-transform: rotate(162deg);
   transform: rotate(162deg); }
 
-.timer[data-minutes="-57"] .timer-bg {
+.pie[data-minutes="-57"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-57"] .timer-half.right {
-  border: 6px solid #E57373;
+.pie[data-minutes="-57"] .pie-half.right {
+  background-color: #E57373;
   -webkit-transform: rotate(-162deg);
   -moz-transform: rotate(-162deg);
   -ms-transform: rotate(-162deg);
   -o-transform: rotate(-162deg);
   transform: rotate(-162deg); }
-.timer[data-minutes="-57"] .timer-half.left {
-  border: 6px solid #E57373;
+.pie[data-minutes="-57"] .pie-half.left {
+  background-color: #E57373;
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg); }
 
-.timer[data-minutes="58"] .timer-half.right {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="58"] .pie-half.right {
+  background-color: #66BB6A;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg); }
-.timer[data-minutes="58"] .timer-half.left {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="58"] .pie-half.left {
+  background-color: #66BB6A;
   -webkit-transform: rotate(168deg);
   -moz-transform: rotate(168deg);
   -ms-transform: rotate(168deg);
   -o-transform: rotate(168deg);
   transform: rotate(168deg); }
 
-.timer[data-minutes="-58"] .timer-bg {
+.pie[data-minutes="-58"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-58"] .timer-half.right {
-  border: 6px solid #E57373;
+.pie[data-minutes="-58"] .pie-half.right {
+  background-color: #E57373;
   -webkit-transform: rotate(-168deg);
   -moz-transform: rotate(-168deg);
   -ms-transform: rotate(-168deg);
   -o-transform: rotate(-168deg);
   transform: rotate(-168deg); }
-.timer[data-minutes="-58"] .timer-half.left {
-  border: 6px solid #E57373;
+.pie[data-minutes="-58"] .pie-half.left {
+  background-color: #E57373;
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg); }
 
-.timer[data-minutes="59"] .timer-half.right {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="59"] .pie-half.right {
+  background-color: #66BB6A;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg); }
-.timer[data-minutes="59"] .timer-half.left {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="59"] .pie-half.left {
+  background-color: #66BB6A;
   -webkit-transform: rotate(174deg);
   -moz-transform: rotate(174deg);
   -ms-transform: rotate(174deg);
   -o-transform: rotate(174deg);
   transform: rotate(174deg); }
 
-.timer[data-minutes="-59"] .timer-bg {
+.pie[data-minutes="-59"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-59"] .timer-half.right {
-  border: 6px solid #E57373;
+.pie[data-minutes="-59"] .pie-half.right {
+  background-color: #E57373;
   -webkit-transform: rotate(-174deg);
   -moz-transform: rotate(-174deg);
   -ms-transform: rotate(-174deg);
   -o-transform: rotate(-174deg);
   transform: rotate(-174deg); }
-.timer[data-minutes="-59"] .timer-half.left {
-  border: 6px solid #E57373;
+.pie[data-minutes="-59"] .pie-half.left {
+  background-color: #E57373;
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg); }
 
-.timer[data-minutes="60"] .timer-half.right {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="60"] .pie-half.right {
+  background-color: #66BB6A;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg); }
-.timer[data-minutes="60"] .timer-half.left {
-  border: 6px solid #66BB6A;
+.pie[data-minutes="60"] .pie-half.left {
+  background-color: #66BB6A;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg); }
 
-.timer[data-minutes="-60"] .timer-bg {
+.pie[data-minutes="-60"] .pie-bg {
   color: #E53935; }
-.timer[data-minutes="-60"] .timer-half.right {
-  border: 6px solid #E57373;
+.pie[data-minutes="-60"] .pie-half.right {
+  background-color: #E57373;
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg); }
-.timer[data-minutes="-60"] .timer-half.left {
-  border: 6px solid #E57373;
+.pie[data-minutes="-60"] .pie-half.left {
+  background-color: #E57373;
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg); }
 
-/*# sourceMappingURL=timer.css.map */
+/*# sourceMappingURL=pie.css.map */
