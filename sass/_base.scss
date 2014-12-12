@@ -2,10 +2,30 @@
    Base Styling Rules
    ======================= */
 
+$tic-minor: 6px;
+$tic-major: 12px;
+
 * {
   @include box-sizing(border-box);
 }
 
 body {
   background-color: #E0E0E0;
+}
+
+pre {
+  margin: 0;
+  background-color: #464646;
+  color: #FAFAFA;
+  overflow: auto;
+}
+
+code {
+  padding: $tic-minor/2 $tic-minor;
+  background-color: #bdbdbd;
+}
+
+.col {
+  padding-top: $tic-minor;
+  padding-bottom: $tic-minor;
 }

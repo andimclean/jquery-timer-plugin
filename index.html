@@ -10,11 +10,14 @@
 
         $(document).ready(function () {
 
-            var template = _.template($("#timer-tpl").html());
+            $('.code').each(function (_, el) {
 
-            _.each([7, 42, 113, -5], function (minute) {
+                var $el = $(el);
+                var id = $el.attr('id');
 
-                $("#timers").append(template({minutes: minute}));
+                var replaced = $el.html().replace(/</g,'&lt;').replace(/>/g, '&gt;');
+
+                $el.html(replaced);
 
             });
 
@@ -28,32 +31,75 @@
 
     <div class="row">
 
-        <h1 class="col col-12 capitalize text-center font-bold">Demonstration of timer pies</h1>
+        <h1 class="col col-12 capitalize text-center font-bold">Timer pies with CSS3</h1>
 
         <div class="col col-12">
-            <h2 class="col col-12 capitalize">Timer pies with border</h2>
-            <div class="col col-12" id="timers"><!-- append different timers here --></div>
-            <div class="col col-12">[SHOW CODE HERE]</div>
-        </div>
+            <h3 class="font-bold col col-12 capitalize">Timer pies with border</h3>
+            <div class="col col-12">Timer pies can be displayed by using the <code>border</code> attribute.</div>
+
+            <!-- Demo timers -->
+
+            <div class="col col-1-4">
+                <div class="timer" data-minutes="7">
+                    <div class="timer-bg">7
+                        <small>m</small>
+                    </div>
+                    <div class="timer-half-container right">
+                        <div class="timer-half right"></div>
+                    </div>
+                    <div class="timer-half-container left">
+                        <div class="timer-half left"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-1-4">
+                <div class="timer" data-minutes="42">
+                    <div class="timer-bg">42
+                        <small>m</small>
+                    </div>
+                    <div class="timer-half-container right">
+                        <div class="timer-half right"></div>
+                    </div>
+                    <div class="timer-half-container left">
+                        <div class="timer-half left"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-1-4">
+                <div class="timer full" data-minutes="112">
+                    <div class="timer-bg">112
+                        <small>m</small>
+                    </div>
+                    <div class="timer-half-container right">
+                        <div class="timer-half right"></div>
+                    </div>
+                    <div class="timer-half-container left">
+                        <div class="timer-half left"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-1-4">
+                <div class="timer" data-minutes="-9">
+                    <div class="timer-bg">-9
+                        <small>m</small>
+                    </div>
+                    <div class="timer-half-container right">
+                        <div class="timer-half right"></div>
+                    </div>
+                    <div class="timer-half-container left">
+                        <div class="timer-half left"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- end of column -->
 
     </div><!-- end of row -->
 
 </div><!-- end of container -->
-
-<script type="text/html" id="timer-tpl">
-    <div class="col col-1-4 mobile-full timer <%= minutes >= 60 ? 'full' : '' %> <%= minutes <= -60 ? 'full negative' : '' %>"
-         data-minutes="<%= minutes %>">
-        <div class="timer-bg"><%= minutes %>
-            <small>m</small>
-        </div>
-        <div class="timer-half-container right">
-            <div class="timer-half right"></div>
-        </div>
-        <div class="timer-half-container left">
-            <div class="timer-half left"></div>
-        </div>
-    </div>
-</script>
 
 </body>
 </html>

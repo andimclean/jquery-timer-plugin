@@ -1153,6 +1153,20 @@ textarea {
 body {
   background-color: #E0E0E0; }
 
+pre {
+  margin: 0;
+  background-color: #464646;
+  color: #FAFAFA;
+  overflow: auto; }
+
+code {
+  padding: 3px 6px;
+  background-color: #bdbdbd; }
+
+.col {
+  padding-top: 6px;
+  padding-bottom: 6px; }
+
 /* ======================
    Timer Pies Module
    ======================= */
