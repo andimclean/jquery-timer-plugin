@@ -38,6 +38,7 @@ Choose a download possibility you like:
 * [Download the latest release](https://github.com/murygina/jquery-timer-plugin/releases/tag/v0.2.0)
 * Download the files `timer.css` and `timer.js` directly from the GitHub project page
 * Clone the repository `git clone https://github.com/murygina/jquery-timer-plugin.git`
+* Install with [Bower](http://bower.io/) `bower install jquery-timer-plugin`
 
 ## Development
 
