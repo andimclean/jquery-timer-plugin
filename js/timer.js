@@ -69,11 +69,3 @@
   };
 }(jQuery));
 
-
-$(function () {
-  'use strict';
-
-  $('.timer').timer();
-
-});
-
