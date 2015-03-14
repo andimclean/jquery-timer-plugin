@@ -16,7 +16,7 @@ module.exports = function (grunt) {
         reporter: require('jshint-stylish'),
         jshintrc: true
       },
-      gruntFile: ['Gruntfile.js']
+      js: ['Gruntfile.js', 'js/**/*.js']
     },
 
     sass: {
@@ -36,9 +36,9 @@ module.exports = function (grunt) {
     },
 
     watch: {
-      gruntFile: {
-        files: ['Gruntfile.js'],
-        tasks: ['jshint:gruntfile']
+      js: {
+        files: ['Gruntfile.js', 'js/**/*.js'],
+        tasks: ['jshint:js']
       },
       sass: {
         files: ['sass/*.scss'],
@@ -47,7 +47,8 @@ module.exports = function (grunt) {
       reload: {
         files: [
           '**/*.html',
-          'css/*.css'
+          'css/*.css',
+          'js/*.js'
         ],
         options: {
           livereload: 8001
@@ -70,6 +71,7 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('serve', [
+    'jshint:js',
     'sass:compile',
     'connect',
     'watch'

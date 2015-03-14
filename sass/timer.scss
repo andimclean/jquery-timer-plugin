@@ -97,7 +97,7 @@ $timer-color-warning: #E53935;
   $deg: (360/60 * $minute);
 
   // positive minutes
-  .timer[data-minutes="#{$minute}"] {
+  .timer[data-duration="#{$minute}"] {
 
     .timer-half.right {
 
@@ -114,7 +114,7 @@ $timer-color-warning: #E53935;
   }
 
   // negative minutes
-  .timer[data-minutes="-#{$minute}"] {
+  .timer[data-duration="-#{$minute}"] {
 
     .timer-bg {
       color: $timer-color-warning;
@@ -134,7 +134,7 @@ $timer-color-warning: #E53935;
   $deg: (360/60 * ($minute - 30));
 
   // positive minutes
-  .timer[data-minutes="#{$minute}"] {
+  .timer[data-duration="#{$minute}"] {
 
     // right half must be filled completely for minutes > 30
     .timer-half.right {
@@ -151,7 +151,7 @@ $timer-color-warning: #E53935;
   }
 
   // negative minutes
-  .timer[data-minutes="-#{$minute}"] {
+  .timer[data-duration="-#{$minute}"] {
 
     .timer-bg {
       color: $timer-color-warning;
