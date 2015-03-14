@@ -30,7 +30,6 @@ module.exports = function (grunt) {
         },
         files: {
           'css/timer.css': 'sass/timer.scss',
-          'css/pie.css': 'sass/pie.scss',
           'css/style.css': 'sass/style.scss'
         }
       }

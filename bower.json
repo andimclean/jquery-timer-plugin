@@ -2,13 +2,9 @@
   "name": "css3-timer-pies",
   "version": "0.1.0",
   "main": [
-    "index.html",
-    "sass/pie.scss",
     "sass/timer.scss",
     "css/timer.css",
-    "css/timer.css.map",
-    "css/pie.css",
-    "css/pie.css.map"
+    "css/timer.css.map"
   ],
   "ignore": [
     "**/.*",
@@ -23,11 +19,12 @@
     "css/style.css.map"
   ],
   "dependencies": {
-    "reset-scss": "*",
     "bourbon": "~4.0.2",
-    "jquery": "~2.1.1",
-    "underscore": "~1.7.0",
-    "css-smart-grid": "~5.1.3",
-    "base": "~1.8.5"
+    "jquery": "~2.1.1"
+  },
+  "devDependencies": {
+    "base": "~1.8.5",
+    "reset-scss": "*",
+    "css-smart-grid": "~5.1.3"
   }
 }
