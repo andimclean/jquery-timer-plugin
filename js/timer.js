@@ -1,3 +1,19 @@
+var tick = function ($el, duration) {
+  'use strict';
+
+  $el.attr('data-duration', duration);
+  $el.find('.duration').html(duration);
+
+  if (duration > 60) {
+    $el.addClass('full');
+  }
+
+  if (duration < -60) {
+    $el.addClass('full negative');
+  }
+
+};
+
 (function ($) {
   'use strict';
 
@@ -34,35 +50,21 @@
 
       var $$ = $(this);
 
-      $$.load('/js/timer.html', function () {
+      $$.html('<div class="timer-bg"><span class="duration"></span><small class="unit"></small></div>' +
+        '<div class="timer-half-container right"><div class="timer-half right"></div></div>' +
+        '<div class="timer-half-container left"><div class="timer-half left"></div></div>');
 
-        $$.addClass('timer');
-        $$.find('.unit').html(unit);
+      $$.addClass('timer');
+      $$.find('.unit').html(unit);
 
-        // start ticking
-        tick(duration);
+      // start ticking
+      tick($$, duration);
 
-        /* global setInterval */
-        setInterval(function () {
-          tick(duration);
-          duration--;
-        }, updateInterval);
-
-      });
-
-      var tick = function (duration) {
-        $$.attr('data-duration', duration);
-        $$.find('.duration').html(duration);
-
-        if (duration > 60) {
-          $$.addClass('full');
-        }
-
-        if (duration < -60) {
-          $$.addClass('full negative');
-        }
-
-      };
+      /* global setInterval */
+      setInterval(function () {
+        tick($$, duration);
+        duration--;
+      }, updateInterval);
 
     });
 
