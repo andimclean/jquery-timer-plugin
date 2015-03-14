@@ -21,9 +21,19 @@ $('#my-timer').timer({duration: 7, unit: 'm'});
 
 ## Integration
 
-The files `timer.css` and `timer.js` are needed for functionality.
+The files `timer.css` and `timer.js` must be included in your project.
+
+Choose a download possibility you like:
+
+* [Download the latest release](https://github.com/murygina/jquery-timer-plugin/archive/master.zip)
+* Download the files `timer.css` and `timer.js` directly from the GitHub project page
+* Clone the repository `git clone https://github.com/murygina/jquery-timer-plugin.git`
 
 ## Development
 
-You can see the documentation / example page by executing `grunt`.
+1. Clone the repository `git clone https://github.com/murygina/jquery-timer-plugin.git`
+2. Ensure you have installed [Grunt](http://gruntjs.com/), [Bower](http://bower.io/), [NodeJS](https://nodejs.org/), [NPM](https://www.npmjs.com/) properly
+3. Run `npm install`
+4. Run `bower install`
+5. Run `grunt` to see the documentation / example page
 

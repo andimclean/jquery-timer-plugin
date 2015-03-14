@@ -5,12 +5,13 @@
   "author": "Aljona Murygina <murygina@synyx.de>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/murygina/css3-timer-pies"
+    "url": "https://github.com/murygina/jquery-timer-plugin"
   },
   "main": [
     "sass/timer.scss",
     "css/timer.css",
-    "css/timer.css.map"
+    "css/timer.css.map",
+    "js/timer.js"
   ],
   "ignore": [
     "**/.*",
