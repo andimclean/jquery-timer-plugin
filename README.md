@@ -25,9 +25,12 @@ The files `timer.css` and `timer.js` must be included in your project. Further [
 as dependency.
 
 ```html
+<!-- CSS -->
 <link rel="stylesheet" href="timer.css"/>
+
+<!-- JS -->
 <script type="text/javascript" src="jquery.min.js"></script>
-<script type="text/javascript" src="js/timer.js"></script>
+<script type="text/javascript" src="timer.js"></script>
 ```
 
 Choose a download possibility you like:
