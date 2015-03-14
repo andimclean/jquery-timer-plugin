@@ -9,19 +9,26 @@ by the ticking timer. Supported units are hours <code>'h'</code>, minutes <code>
 
 *HTML*
 
-```
+```html
 <span id="my-timer"></span>
 ```
 
 *JS*
 
-```
+```js
 $('#my-timer').timer({duration: 7, unit: 'm'});
 ```
 
 ## Integration
 
-The files `timer.css` and `timer.js` must be included in your project.
+The files `timer.css` and `timer.js` must be included in your project. Further [jQuery](http://jquery.com/) is needed
+as dependency.
+
+```
+<link rel="stylesheet" href="timer.css"/>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="js/timer.js"></script>
+```
 
 Choose a download possibility you like:
 
