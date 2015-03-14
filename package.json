@@ -1,19 +1,6 @@
 {
-  "name": "css3-timer-pies",
-  "version": "0.1.0",
-  "description": "An example project to show how to create not animated timer pies with CSS3",
-  "author": "Aljona Murygina <murygina@synyx.de>",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/murygina/css3-timer-pies"
-  },
-  "main": [
-    "index.html",
-    "sass/_pie.scss",
-    "sass/timer.scss",
-    "css/timer.css"
-  ],
-  "dependencies": {
+  "repository": {},
+  "devDependencies": {
     "grunt": "^0.4.5",
     "time-grunt": "^1.0.0",
     "grunt-contrib-connect": "^0.8.0",

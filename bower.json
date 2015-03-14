@@ -1,6 +1,11 @@
 {
-  "name": "css3-timer-pies",
   "version": "0.1.0",
+  "description": "An example project to show how to create not animated timer pies with CSS3",
+  "author": "Aljona Murygina <murygina@synyx.de>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/murygina/css3-timer-pies"
+  },
   "main": [
     "sass/timer.scss",
     "css/timer.css",
