@@ -24,7 +24,7 @@ $('#my-timer').timer({duration: 7, unit: 'm'});
 The files `timer.css` and `timer.js` must be included in your project. Further [jQuery](http://jquery.com/) is needed
 as dependency.
 
-```
+```html
 <link rel="stylesheet" href="timer.css"/>
 <script type="text/javascript" src="jquery.min.js"></script>
 <script type="text/javascript" src="js/timer.js"></script>
