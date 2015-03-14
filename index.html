@@ -1,103 +1,107 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <meta charset="UTF-8">
-    <title>CSS3 Timer Pies</title>
-    <link rel="stylesheet" href="css/timer.css"/>
-    <link rel="stylesheet" href="css/style.css"/>
-    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="bower_components/underscore/underscore-min.js"></script>
-    <script type="text/javascript">
+  <meta charset="UTF-8">
+  <title>CSS3 Timer Pies</title>
+  <link rel="stylesheet" href="css/timer.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="bower_components/underscore/underscore-min.js"></script>
+  <script type="text/javascript">
 
-        $(document).ready(function () {
+    $(document).ready(function () {
 
-            $('.code').each(function (_, el) {
+      $('.code').each(function (_, el) {
 
-                var $el = $(el);
-                var id = $el.attr('id');
+        var $el = $(el);
+        var id = $el.attr('id');
 
-                var replaced = $el.html().replace(/</g,'&lt;').replace(/>/g, '&gt;');
+        var replaced = $el.html().replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-                $el.html(replaced);
+        $el.html(replaced);
 
-            });
+      });
 
-        })
+    })
 
-    </script>
+  </script>
 </head>
 <body>
 
 <div class="container">
 
-    <div class="row">
+  <div class="row">
 
-        <h1 class="col col-12 capitalize text-center font-bold">Timer pies</h1>
+    <h1 class="col col-12 capitalize text-center font-bold">Timer pies</h1>
 
-        <div class="col col-12">
-            <!-- Demo timers -->
+    <div class="col col-12">
 
-            <div class="col col-1-4">
-                <div class="timer" data-minutes="7">
-                    <div class="timer-bg">7
-                        <small>m</small>
-                    </div>
-                    <div class="timer-half-container right">
-                        <div class="timer-half right"></div>
-                    </div>
-                    <div class="timer-half-container left">
-                        <div class="timer-half left"></div>
-                    </div>
-                </div>
-            </div>
+      <!-- Demo timers -->
 
-            <div class="col col-1-4">
-                <div class="timer" data-minutes="42">
-                    <div class="timer-bg">42
-                        <small>m</small>
-                    </div>
-                    <div class="timer-half-container right">
-                        <div class="timer-half right"></div>
-                    </div>
-                    <div class="timer-half-container left">
-                        <div class="timer-half left"></div>
-                    </div>
-                </div>
-            </div>
+      <div class="col col-1-4">
+        <div class="timer" data-minutes="7">
+          <div class="timer-bg">7
+            <small>m</small>
+          </div>
+          <div class="timer-half-container right">
+            <div class="timer-half right"></div>
+          </div>
+          <div class="timer-half-container left">
+            <div class="timer-half left"></div>
+          </div>
+        </div>
+      </div>
 
-            <div class="col col-1-4">
-                <div class="timer full" data-minutes="112">
-                    <div class="timer-bg">112
-                        <small>m</small>
-                    </div>
-                    <div class="timer-half-container right">
-                        <div class="timer-half right"></div>
-                    </div>
-                    <div class="timer-half-container left">
-                        <div class="timer-half left"></div>
-                    </div>
-                </div>
-            </div>
+      <div class="col col-1-4">
+        <div class="timer" data-minutes="42">
+          <div class="timer-bg">42
+            <small>m</small>
+          </div>
+          <div class="timer-half-container right">
+            <div class="timer-half right"></div>
+          </div>
+          <div class="timer-half-container left">
+            <div class="timer-half left"></div>
+          </div>
+        </div>
+      </div>
 
-            <div class="col col-1-4">
-                <div class="timer" data-minutes="-9">
-                    <div class="timer-bg">-9
-                        <small>m</small>
-                    </div>
-                    <div class="timer-half-container right">
-                        <div class="timer-half right"></div>
-                    </div>
-                    <div class="timer-half-container left">
-                        <div class="timer-half left"></div>
-                    </div>
-                </div>
-            </div>
+      <div class="col col-1-4">
+        <div class="timer full" data-minutes="112">
+          <div class="timer-bg">112
+            <small>m</small>
+          </div>
+          <div class="timer-half-container right">
+            <div class="timer-half right"></div>
+          </div>
+          <div class="timer-half-container left">
+            <div class="timer-half left"></div>
+          </div>
+        </div>
+      </div>
 
-        </div><!-- end of column -->
+      <div class="col col-1-4">
+        <div class="timer" data-minutes="-9">
+          <div class="timer-bg">-9
+            <small>m</small>
+          </div>
+          <div class="timer-half-container right">
+            <div class="timer-half right"></div>
+          </div>
+          <div class="timer-half-container left">
+            <div class="timer-half left"></div>
+          </div>
+        </div>
+      </div>
 
-    </div><!-- end of row -->
+    </div>
+    <!-- end of column -->
 
-</div><!-- end of container -->
+  </div>
+  <!-- end of row -->
+
+</div>
+<!-- end of container -->
 
 </body>
 </html>
