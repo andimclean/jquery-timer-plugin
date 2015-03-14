@@ -9,18 +9,21 @@ by the ticking timer. Supported units are hours <code>'h'</code>, minutes <code>
 
 *HTML*
 
-<pre>
+```
 <span id="my-timer"></span>
-</pre>
+```
 
 *JS*
 
-<pre>
+```
 $('#my-timer').timer({duration: 7, unit: 'm'});
-</pre>
+```
 
 ## Integration
 
 The files `timer.css` and `timer.js` are needed for functionality.
 
+## Development
+
+You can see the documentation / example page by executing `grunt`.
 
