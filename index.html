@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Jquery-timer-plugin by murygina</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Jquery-timer-plugin</h1>
+          <h2>jQuery Countdown Timer Plugin showing nice circle timers that are ticking</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/murygina/jquery-timer-plugin/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/murygina/jquery-timer-plugin/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/murygina/jquery-timer-plugin" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h1>
+<a id="jquery-countdown-timer-plugin" class="anchor" href="#jquery-countdown-timer-plugin" aria-hidden="true"><span class="octicon octicon-link"></span></a>jQuery Countdown Timer Plugin</h1>
+
+<p>This is a jQuery plugin that allows to display a ticking timer.</p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>You can bind the jQuery timer plugin to every element you want to. Specify a duration and a unit that should be shown
+by the ticking timer. Supported units are hours <code>'h'</code>, minutes <code>'m'</code> and seconds <code>'s'</code>.</p>
+
+<p><em>HTML</em></p>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">span</span> <span class="pl-e">id</span>=<span class="pl-s1"><span class="pl-pds">"</span>my-timer<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">span</span>&gt;</pre></div>
+
+<p><em>JS</em></p>
+
+<div class="highlight highlight-js"><pre>$(<span class="pl-s1"><span class="pl-pds">'</span>#my-timer<span class="pl-pds">'</span></span>).timer({duration<span class="pl-k">:</span> <span class="pl-c1">7</span>, unit<span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>m<span class="pl-pds">'</span></span>});</pre></div>
+
+<h2>
+<a id="integration" class="anchor" href="#integration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Integration</h2>
+
+<p>The files <code>timer.css</code> and <code>timer.js</code> must be included in your project. Further <a href="http://jquery.com/">jQuery</a> is needed
+as dependency.</p>
+
+<div class="highlight highlight-html"><pre><span class="pl-c">&lt;!-- CSS --&gt;</span>
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s1"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s1"><span class="pl-pds">"</span>timer.css<span class="pl-pds">"</span></span>/&gt;
+
+<span class="pl-c">&lt;!-- JS --&gt;</span>
+&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s1"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>jquery.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s1"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>timer.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+
+<p>Choose a download possibility you like:</p>
+
+<ul>
+<li><a href="https://github.com/murygina/jquery-timer-plugin/releases/tag/v0.2.0">Download the latest release</a></li>
+<li>Download the files <code>timer.css</code> and <code>timer.js</code> directly from the GitHub project page</li>
+<li>Clone the repository <code>git clone https://github.com/murygina/jquery-timer-plugin.git</code>
+</li>
+<li>Install with <a href="http://bower.io/">Bower</a> <code>bower install jquery-timer-plugin</code>
+</li>
+</ul>
+
+<h2>
+<a id="development" class="anchor" href="#development" aria-hidden="true"><span class="octicon octicon-link"></span></a>Development</h2>
+
+<ol>
+<li>Clone the repository <code>git clone https://github.com/murygina/jquery-timer-plugin.git</code>
+</li>
+<li>Ensure you have installed <a href="http://gruntjs.com/">Grunt</a>, <a href="http://bower.io/">Bower</a>, <a href="https://nodejs.org/">NodeJS</a>, <a href="https://www.npmjs.com/">NPM</a> properly</li>
+<li>Run <code>npm install</code>
+</li>
+<li>Run <code>bower install</code>
+</li>
+<li>Run <code>grunt</code> to see the documentation / example page</li>
+</ol>
+        </section>
+
+        <footer>
+          Jquery-timer-plugin is maintained by <a href="https://github.com/murygina">murygina</a><br>
+          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
