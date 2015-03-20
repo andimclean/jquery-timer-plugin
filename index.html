@@ -6,10 +6,23 @@
     <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/timer.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <script type="text/javascript" src="javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/timer.js"></script>
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+    <script type="text/javascript">
+
+      $(document).ready(function () {
+        $('#timer-seconds').timer({duration: 120, unit: 's'});
+        $('#timer-minutes').timer({duration: 12, unit: 'm'});
+      })
+
+    </script>
+
     <title>Jquery-timer-plugin by murygina</title>
   </head>
 
@@ -35,6 +48,9 @@
 <a id="jquery-countdown-timer-plugin" class="anchor" href="#jquery-countdown-timer-plugin" aria-hidden="true"><span class="octicon octicon-link"></span></a>jQuery Countdown Timer Plugin</h1>
 
 <p>This is a jQuery plugin that allows to display a ticking timer.</p>
+
+<div id="timer-seconds"></div>
+<div id="timer-minutes" style="margin-left: 120px"></div>
 
 <h2>
 <a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
