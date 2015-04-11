@@ -13,12 +13,10 @@
 
     $(document).ready(function () {
 
-      $('#timer-7').timer({duration: 7, unit: 'm'});
-      $('#timer-42').timer({duration: 42, unit: 'm'});
-      $('#timer-112').timer({duration: 112, unit: 'm'});
-      $('#timer-0').timer({duration: 0, unit: 'm'});
-      $('#timer-9-neg').timer({duration: -9, unit: 'm'});
-      $('#timer-67-neg').timer({duration: -67, unit: 'm'});
+      $('#timer-7').timer({duration: 20, unit: 's' , callback:function(){alert("Timer 7, timed out")}});
+      $('#timer-42').timer({duration: 10, unit: 'm' , callback:function(){alert("Timer 42, timed out")}});
+      $('#timer-112').timer({duration: 5, unit: 'm' , callback:function(){alert("Timer 112, timed out")}});
+      $('#timer-0').timer({duration: 10, unit: 's' , callback:function(){alert("Timer 10, timed out")}});
 
       $('.prettify').each(function (_, el) {
 

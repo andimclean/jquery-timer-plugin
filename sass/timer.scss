@@ -16,7 +16,7 @@
    Timer Module
    ======================= */
 
-$timer-size: 100px;
+$timer-size: 30px;
 
 $timer-border: 6px;
 $timer-border-color-base: #BDBDBD;
@@ -36,20 +36,6 @@ $timer-color-warning: #E53935;
       border: $timer-border solid $timer-border-color-regular;
       @include transform(rotate(180deg));
     }
-
-    &.negative {
-
-      .timer-bg {
-        color: $timer-color-warning;
-      }
-
-      .timer-half.right,
-      .timer-half.left {
-        border: $timer-border solid $timer-border-color-warning;
-      }
-
-    }
-
   }
 
   .timer-bg,
@@ -69,7 +55,7 @@ $timer-color-warning: #E53935;
     text-align: center;
     line-height: $timer-size - 2*$timer-border;
     vertical-align: baseline;
-    font-size: 1.5em;
+    font-size: 1em;
 
     small {
       font-size: 0.5em;
@@ -92,9 +78,9 @@ $timer-color-warning: #E53935;
 
 }
 
-@for $minute from 1 through 30 {
+@for $minute from 1 through 50 {
 
-  $deg: (360/60 * $minute);
+  $deg: (360/100 * $minute);
 
   // positive minutes
   .timer[data-duration="#{$minute}"] {
@@ -113,25 +99,11 @@ $timer-color-warning: #E53935;
 
   }
 
-  // negative minutes
-  .timer[data-duration="-#{$minute}"] {
-
-    .timer-bg {
-      color: $timer-color-warning;
-    }
-
-    .timer-half.left {
-      @include transform(rotate(-#{$deg}deg));
-      border: $timer-border solid $timer-border-color-warning;
-    }
-
-  }
-
 }
 
-@for $minute from 31 through 60 {
+@for $minute from 51 through 100 {
 
-  $deg: (360/60 * ($minute - 30));
+  $deg: (360/100 * ($minute - 50));
 
   // positive minutes
   .timer[data-duration="#{$minute}"] {
@@ -149,26 +121,4 @@ $timer-color-warning: #E53935;
     }
 
   }
-
-  // negative minutes
-  .timer[data-duration="-#{$minute}"] {
-
-    .timer-bg {
-      color: $timer-color-warning;
-    }
-
-    // right half must be filled prorata temporis
-    .timer-half.right {
-      border: $timer-border solid $timer-border-color-warning;
-      @include transform(rotate(-#{$deg}deg));
-    }
-
-    // left half must be filled completely for minutes < -30
-    .timer-half.left {
-      border: $timer-border solid $timer-border-color-warning;
-      @include transform(rotate(-180deg));
-    }
-
-  }
-
 }

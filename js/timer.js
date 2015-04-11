@@ -1,73 +1,87 @@
-var tick = function ($el, duration) {
+(function(factory) {
   'use strict';
+	if (typeof define === 'function' && define.amd) {
+		// AMD anonymous module
+		define([ 'jquery' ], factory);
+	} else if (typeof require === 'function' && typeof exports === 'object' && typeof module === 'object') {
+		// CommonJS module
+		var jQuery = require('jquery');
+		require('jquery.ui.sortable');
+		factory(jQuery);
+	} else {
+		// No module loader (plain <script> tag) - put directly in global namespace
+		factory(window.jQuery);
+	}
+})
+    (function($) {
+	    'use strict';
+	    function timeNow() {
+		    var d = new Date();
+		    return d.getTime();
+	    }
 
-  $el.attr('data-duration', duration);
-  $el.find('.duration').html(duration);
+	    $.fn.timer = function(options) {
 
-  if (duration > 60) {
-    $el.addClass('full');
-  }
+		    var settings = $.extend({
+		      duration : 60,
+		      unit : 's'
+		    }, options);
 
-  if (duration < -60) {
-    $el.addClass('full negative');
-  }
+		    return this
+		        .each(function() {
 
-};
+			        var time = timeNow();
+			        var timeEnd;
+			        var duration = settings.duration;
+			        var unit = settings.unit;
 
-(function ($) {
-  'use strict';
+			        var updateInterval;
 
-  $.fn.timer = function (options) {
+			        if (unit === 'm') {
+				        duration = duration * 60;
+			        } else if (unit === 's') {
+			        	duration = duration * 1;
+			        } else if (unit === 'h') {
+				        unit = 'm';
+				        duration = duration * 3600;
+			        } else {
+				        throw 'The provided unit "' + unit + 
+				           '" is unsupported! Supported units are "s", "m" and "h".';
+			        }
 
-    var settings = $.extend({
+			        timeEnd = time + duration * 1000;
+			        updateInterval = Math.floor((timeEnd - time) / 100);
+			        var $$ = $(this);
 
-      duration: 60,
-      unit: 's'
-    }, options);
+			        $$
+			            .html('<div class="timer-bg"><span class="duration"></span><small class="unit"></small></div>' + 
+			              '<div class="timer-half-container right"><div class="timer-half right"></div></div>' +
+			              '<div class="timer-half-container left"><div class="timer-half left"></div></div>');
 
-    var updateEverySecond = 1000;
-    var updateEveryMinute = 60 * 1000;
+			        $$.addClass('timer');
 
-    return this.each(function () {
+			        // start ticking
+			        $$.attr('data-duration', 100);
 
-      var duration = settings.duration;
-      var unit = settings.unit;
+			        /* global setInterval */
+			        var interval = null;
+			        interval = setInterval(function() {
+				        var timeN = timeNow();
 
-      var updateInterval;
+				        var percent = Math.floor((timeEnd - timeN) / updateInterval);
+				        if (percent <0) {
+				        	percent = 0;
+				        }
+				        $$.attr('data-duration', percent);
+				        if (timeN >= timeEnd) {
+					        window.clearInterval(interval);
+					        if (typeof options.callback === 'function') {
+						        options.callback($$);
+					        }
+					        
+				        }
+			        }, updateInterval);
 
-      if (unit === 'm') {
-        updateInterval = updateEveryMinute;
-      } else if (unit === 's') {
-        updateInterval = updateEverySecond;
-      } else if (unit === 'h') {
-        // if provided e.g. 2 hours convert it to 120 minutes
-        unit = 'm';
-        duration = duration * 60;
-        updateInterval = updateEveryMinute;
-      } else {
-        throw 'The provided unit "' + unit + '" is unsupported! Supported units are "s", "m" and "h".';
-      }
-
-      var $$ = $(this);
-
-      $$.html('<div class="timer-bg"><span class="duration"></span><small class="unit"></small></div>' +
-        '<div class="timer-half-container right"><div class="timer-half right"></div></div>' +
-        '<div class="timer-half-container left"><div class="timer-half left"></div></div>');
-
-      $$.addClass('timer');
-      $$.find('.unit').html(unit);
-
-      // start ticking
-      tick($$, duration);
-
-      /* global setInterval */
-      setInterval(function () {
-        tick($$, duration);
-        duration--;
-      }, updateInterval);
-
+		        });
+	    };
     });
-
-  };
-}(jQuery));
-
